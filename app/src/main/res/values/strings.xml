@@ -1283,5 +1283,6 @@ que mejoran el rendimiento global de la organización.
     <string name="title_activity_acerca_de">Acerca de CMMI Helper</string>
     <string name="title_activity_plot">Plot</string>
     <string name="title_activity_plot2">Plot2</string>
+  <string name="evaluation_details">Evaluation details</string>
 
 </resources>

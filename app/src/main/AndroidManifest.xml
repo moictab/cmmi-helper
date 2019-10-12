@@ -22,11 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.project.Nueva_organizacion"
+            android:name="com.example.project.NewOrganizationActivity"
             android:label="@string/title_activity_nueva_organizacion" >
         </activity>
         <activity
-            android:name="com.example.project.Ayuda_CMMI"
+            android:name="com.example.project.HelpActivity"
             android:label="@string/title_activity_ayuda__cmmi" >
         </activity>
         <activity
@@ -34,7 +34,7 @@
             android:label="@string/title_activity_nueva_evaluacion" >
         </activity>
         <activity
-            android:name="com.example.project.Consultar_organizacion"
+            android:name="com.example.project.OrganizationDetailsActivity"
             android:label="@string/title_activity_consultar_organizacion" >
         </activity>
         <activity
@@ -90,7 +90,7 @@
             android:label="@string/title_activity_nueva_evaluacion_continua" >
         </activity>
         <activity
-            android:name="com.example.project.Acerca_de"
+            android:name="com.example.project.AboutActivity"
             android:label="@string/title_activity_acerca_de" >
         </activity>
         <activity

@@ -1,8 +1,5 @@
 package com.example.project;
 
-import java.io.File;
-
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,192 +20,192 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import java.io.File;
 
 public class MainActivity extends Activity {
 
-	GestorSQLiteHelper gestor = new GestorSQLiteHelper(this, "databasefile",
-			null, 1);
+  CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
+      null, 1);
 
-	protected void onCreate(Bundle savedInstanceState) {
+  protected void onCreate(Bundle savedInstanceState) {
 
-		setTitle("Inicio");
+    setTitle("Inicio");
 
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
-		GridView grid = (GridView) findViewById(R.id.gridView1);
-		grid.setAdapter(new ImageAdapter(this));
+    GridView grid = findViewById(R.id.gridView1);
+    grid.setAdapter(new ImageAdapter(this));
 
-		Button buttonNuevaOrganizacion = (Button) findViewById(R.id.buttonNuevaOrganizacion);
-		Button buttonAyudaCMMI = (Button) findViewById(R.id.buttonAyudaCMMI_AM);
+    Button buttonNuevaOrganizacion = findViewById(R.id.buttonNuevaOrganizacion);
+    Button buttonAyudaCMMI = findViewById(R.id.buttonAyudaCMMI_AM);
 
-		buttonNuevaOrganizacion.setOnClickListener(new View.OnClickListener() {
+    buttonNuevaOrganizacion.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this,
-						Nueva_organizacion.class);
-				MainActivity.this.startActivity(intent);
-			}
-		});
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this,
+            NewOrganizationActivity.class);
+        MainActivity.this.startActivity(intent);
+      }
+    });
 
-		buttonAyudaCMMI.setOnClickListener(new View.OnClickListener() {
+    buttonAyudaCMMI.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this, Ayuda_CMMI.class);
-				MainActivity.this.startActivity(intent);
-			}
-		});
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+        MainActivity.this.startActivity(intent);
+      }
+    });
 
-		grid.setOnItemClickListener(new OnItemClickListener() {
+    grid.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				Intent intent = new Intent(MainActivity.this,
-						Consultar_organizacion.class);
-				intent.putExtra("posicion", position);
-				MainActivity.this.startActivity(intent);
-			}
-		});
-	}
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view,
+          int position, long id) {
+        Intent intent = new Intent(MainActivity.this,
+            OrganizationDetailsActivity.class);
+        intent.putExtra("posicion", position);
+        MainActivity.this.startActivity(intent);
+      }
+    });
+  }
 
-	public class ImageAdapter extends BaseAdapter {
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    // Inflate the menu; this adds items to the action bar if it is present.
+    getMenuInflater().inflate(R.menu.main, menu);
+    return true;
+  }
 
-		SQLiteDatabase database = gestor.getWritableDatabase();
-		Cursor cursor = database.rawQuery("SELECT * FROM Organizaciones", null);
-		boolean bol = cursor.moveToFirst();
-		int contador = 0;
-		View v;
-		ImageView iv;
-		TextView tv = null;
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    // Handle item selection
+    switch (item.getItemId()) {
+      case R.id.action_settings:
+        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        MainActivity.this.startActivity(intent);
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }
 
-		Context mContext;
-		public static final int ACTIVITY_CREATE = 10;
+  public void onResume() {
+    super.onResume();
+    setTitle("Inicio");
 
-		public ImageAdapter(Context context) {
-			mContext = context;
-		}
+    setContentView(R.layout.activity_main);
 
-		@Override
-		public int getCount() {
-			return cursor.getCount();
-		}
+    GridView grid = findViewById(R.id.gridView1);
+    grid.setAdapter(new ImageAdapter(this));
 
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
+    Button buttonNuevaOrganizacion = findViewById(R.id.buttonNuevaOrganizacion);
+    Button buttonAyudaCMMI = findViewById(R.id.buttonAyudaCMMI_AM);
 
-			Bitmap myBitmap = null;
+    buttonNuevaOrganizacion.setOnClickListener(new View.OnClickListener() {
 
-			if (convertView == null) {
-				String nombreOrg = cursor.getString(1);
-				File imgFile = new File(cursor.getString(0));
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this,
+            NewOrganizationActivity.class);
+        MainActivity.this.startActivity(intent);
+      }
+    });
 
-				if (imgFile.exists()) {
-					myBitmap = BitmapFactory.decodeFile(imgFile
-							.getAbsolutePath());
-				}
+    buttonAyudaCMMI.setOnClickListener(new View.OnClickListener() {
 
-				if (contador < cursor.getCount() - 1) {
-					cursor.moveToNext();
-					contador++;
-				}
-				LayoutInflater li = getLayoutInflater();
-				v = li.inflate(R.layout.icon, null);
-				tv = (TextView) v.findViewById(R.id.icon_text);
-				tv.setText(nombreOrg);
-				iv = (ImageView) v.findViewById(R.id.icon_image);
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+        MainActivity.this.startActivity(intent);
+      }
+    });
 
-				if (myBitmap != null) {
-					iv.setImageBitmap(myBitmap);
-				} else {
-					iv.setImageResource(R.drawable.cmmi_icon);
-				}
-				// iv.setImageBitmap(image)
+    grid.setOnItemClickListener(new OnItemClickListener() {
 
-			} else {
-				v = convertView;
-			}
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view,
+          int position, long id) {
+        Intent intent = new Intent(MainActivity.this,
+            OrganizationDetailsActivity.class);
+        intent.putExtra("posicion", position);
+        MainActivity.this.startActivity(intent);
+      }
+    });
+  }
 
-			return v;
-		}
+  public class ImageAdapter extends BaseAdapter {
 
-		@Override
-		public Object getItem(int arg0) {
-			// TODO Auto-generated method stub
-			return null;
-		}
+    public static final int ACTIVITY_CREATE = 10;
+    SQLiteDatabase database = gestor.getWritableDatabase();
+    Cursor cursor = database.rawQuery("SELECT * FROM Organizaciones", null);
+    boolean bol = cursor.moveToFirst();
+    int contador = 0;
+    View v;
+    ImageView iv;
+    TextView tv = null;
+    Context mContext;
 
-		@Override
-		public long getItemId(int arg0) {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-	}
+    public ImageAdapter(Context context) {
+      mContext = context;
+    }
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
+    @Override
+    public int getCount() {
+      return cursor.getCount();
+    }
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle item selection
-		switch (item.getItemId()) {
-		case R.id.action_settings:
-			Intent intent = new Intent(MainActivity.this, Acerca_de.class);
-			MainActivity.this.startActivity(intent);
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-	public void onResume() {
-		super.onResume();
-		setTitle("Inicio");
+      Bitmap myBitmap = null;
 
-		setContentView(R.layout.activity_main);
+      if (convertView == null) {
+        String nombreOrg = cursor.getString(1);
+        File imgFile = new File(cursor.getString(0));
 
-		GridView grid = (GridView) findViewById(R.id.gridView1);
-		grid.setAdapter(new ImageAdapter(this));
+        if (imgFile.exists()) {
+          myBitmap = BitmapFactory.decodeFile(imgFile
+              .getAbsolutePath());
+        }
 
-		Button buttonNuevaOrganizacion = (Button) findViewById(R.id.buttonNuevaOrganizacion);
-		Button buttonAyudaCMMI = (Button) findViewById(R.id.buttonAyudaCMMI_AM);
+        if (contador < cursor.getCount() - 1) {
+          cursor.moveToNext();
+          contador++;
+        }
+        LayoutInflater li = getLayoutInflater();
+        v = li.inflate(R.layout.icon, null);
+        tv = v.findViewById(R.id.icon_text);
+        tv.setText(nombreOrg);
+        iv = v.findViewById(R.id.icon_image);
 
-		buttonNuevaOrganizacion.setOnClickListener(new View.OnClickListener() {
+        if (myBitmap != null) {
+          iv.setImageBitmap(myBitmap);
+        } else {
+          iv.setImageResource(R.drawable.cmmi_icon);
+        }
+        // iv.setImageBitmap(image)
 
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this,
-						Nueva_organizacion.class);
-				MainActivity.this.startActivity(intent);
-			}
-		});
+      } else {
+        v = convertView;
+      }
 
-		buttonAyudaCMMI.setOnClickListener(new View.OnClickListener() {
+      return v;
+    }
 
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this, Ayuda_CMMI.class);
-				MainActivity.this.startActivity(intent);
-			}
-		});
+    @Override
+    public Object getItem(int arg0) {
+      // TODO Auto-generated method stub
+      return null;
+    }
 
-		grid.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				Intent intent = new Intent(MainActivity.this,
-						Consultar_organizacion.class);
-				intent.putExtra("posicion", position);
-				MainActivity.this.startActivity(intent);
-			}
-		});
-	}
+    @Override
+    public long getItemId(int arg0) {
+      // TODO Auto-generated method stub
+      return 0;
+    }
+  }
 
 }
