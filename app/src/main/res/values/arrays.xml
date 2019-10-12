@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "example_work_products">
+    <item>No inspeccionado</item>
+    <item>Inspeccionado</item>
+    <item>Perdido</item>
+    <item>Inviable</item>
+    </string-array>
+</resources>

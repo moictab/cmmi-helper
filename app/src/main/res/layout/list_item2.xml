@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget44"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_x="201px"
+    android:layout_y="165px"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/big_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textStyle="bold" >
+
+    </TextView>
+    
+    <TextView
+        android:id="@+id/little_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp" >
+    </TextView>
+
+</LinearLayout>

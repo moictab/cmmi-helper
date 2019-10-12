@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="acerca">Acerca de...</string>
+    <string name="app_name">CMMI Helper</string>
+    <string name="action_settings">Settings</string>
+    <string name="nueva_organizacion">Nueva organización</string>
+    <string name="eliminar_organizacion">Eliminar organización</string>
+    <string name="ayuda_cmmi">Ayuda CMMI</string>
+    <string name="modificar_consultar">Modificar/Consultar</string>
+    <string name="opciones_organizaciones">Opciones orgs.</string>
+    <string name="opciones_evaluacion">Opciones eval.</string>
+    <string name="guardar">Guardar</string>
+    <string name="title_activity_nueva_organizacion">Nueva organización</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nueva_evaluacion">Nueva evaluación</string>
+    <string name="continuar_evaluacion">Continuar evaluación</string>
+    <string name="eliminar_evaluacion">Eliminar evaluación</string>
+    <string name="title_activity_ayuda__cmmi">Ayuda de CMMI</string>
+    <string name="nombre_organizacion">Nombre:</string>
+    <string name="persona_contacto">Persona de contacto</string>
+    <string name="nombre_contacto">Nombre:</string>
+    <string name="cargo_contacto">Cargo:</string>
+    <string name="correo_contacto">Correo:</string>
+    <string name="telefono_contacto">Teléfono:</string>
+    <string name="notas">Notas:</string>
+    <string name="title_activity_nueva_evaluacion">Nueva evaluación</string>
+    <string name="datos_evaluacion">Datos de la evaluación</string>
+    <string name="datos_organizacion">Datos de la organización</string>
+    <string name="anadir_icono">Añadir icono</string>
+    <string name="consultar_evaluaciones">Consultar evaluaciones</string>
+    <string name="title_activity_consultar_organizacion">Datos de organización</string>
+    <string name="nombre_evaluacion">Nombre:</string>
+    <string name="numero_evaluacion">Número:</string>
+    <string name="fecha_inicio">Fecha de inicio:</string>
+    <string name="gestion_configuracion">CM - Gestión de la configuración</string>
+    <string name="monitorizacion_control">PMC - Monitorización y control del proyecto</string>
+    <string name="planificacion_proyecto">PP - Planificación del proyecto</string>
+    <string name="aseguramiento_calidad">PPQA - Aseguramiento de la calidad del proceso y del producto</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="gestion_requisitos">REQM - Gestión de requisitos</string>
+    <string name="medicion_analisis">MA - Medición y análisis</string>
+    <string name="gestion_acuerdos">SAM - Gestión de acuerdos con proveedores</string>
+    <string name="madurez_2">ML2 - Nivel de madurez 2</string>
+    <string name="title_activity_gestion_configuracion">CM - Gestión de la configuración</string>
+    <string name="acerca_text">
+<![CDATA[<center><h1><b>CMMI Helper</b></h1><br><br>
+        <b>Trabajo Fin de grado<br><br>
+        Especialidad en Ingeniería del Software<br><br></b>
+        Soportando la evaluación del nivel de madurez y capacidad de una organización considerando CMMI v1.3<br><br>
+Presentado por: Moisés Cano Torralba<br><br>
+Dirigido por: Francisco Montero Simarro</center>
+        
+        ]]>
+    </string>
+    <string name="gestion_configuracion_SP11">
+<![CDATA[
+         <h1><b>CM - Gestión de la configuración</b></h1><br>
+        <b>Propósito</b><br><br>El propósito de la Gestión de Configuración (CM) es establecer y mantener
+		la integridad de los productos de trabajo utilizando la identificación
+de la configuración, el control de la configuración, el informe del
+estado de la configuración y las auditorías de la configuración.
+
+<br><br><br><b><h3>SG1 - Establecer las líneas base</h3></b>
+        Se establecen las líneas base de los productos de trabajo identificados.<br><br>
+Las prácticas específicas para establecer las líneas base se cubren por
+esta meta específica. Las prácticas específicas bajo la meta específica
+Seguir y controlar los cambios sirven para mantener las líneas base.
+Las prácticas específicas de la meta específica Establecer la integridad,
+documentan y auditan la integridad de las líneas base.
+
+<br><br><br><b>SP1.1 - Identificar los elementos de configuración</b><br><br>
+Identificar los elementos de configuración, los componentes, y los productos
+de trabajo relacionados que serán puestos bajo gestión de configuración.]]>
+    </string>
+    <string name="gestion_configuracion_SP11subpracticas">
+<![CDATA[
+      <br><br><b>Subprácticas</b><br><br>
+1. Seleccionar los elementos de configuración y los productos de trabajo
+que los componen, basándose en criterios documentados.<br>
+2. Asignar identificadores únicos a los elementos de configuración.<br>
+3. Especificar las características importantes de cada elemento de
+configuración.<br>
+4. Especificar cuándo se pone bajo gestión de configuración cada elemento
+de configuración.<br>
+5. Identificar al propietario responsable de cada elemento de
+configuración.<br>
+6. Especificar las relaciones entre los elementos de configuración.
+        ]]>
+    </string>
+    <string name="gestion_configuracion_SP12">
+<![CDATA[ <br><br><b>SP 1.2 - Establecer un sistema de gestión de configuración</b><br><br>
+Establecer y mantener un sistema de gestión de configuración y de gestión de
+cambios para controlar los productos de trabajo. ]]>
+    </string>
+    <string name="gestion_configuracion_SP12subrpacticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Establecer un mecanismo para gestionar múltiples niveles de control.<br>
+2. Proporcionar control de acceso para asegurar el acceso autorizado al
+sistema de gestión de configuración.<br>
+3. Almacenar y recuperar los elementos de configuración en un sistema
+de gestión de configuración.<br>
+4. Compartir y transferir los elementos de configuración entre los niveles
+de control en el sistema de gestión de configuración.<br>
+5. Almacenar y recuperar versiones archivadas de elementos de
+configuración.<br>
+6. Almacenar, actualizar y recuperar los registros de gestión de
+configuración.<br>
+7. Crear informes de gestión de configuración a partir del sistema de
+gestión de configuración.<br>
+8. Preservar los contenidos del sistema de gestión de configuración.<br>
+9. Modificar la estructura de gestión de configuración según sea
+necesario.<br>    ]]>
+    </string>
+    <string name="gestion_configuracion_SP13">
+<![CDATA[<br><br><b>SP 1.3 Crear o liberar las líneas base</b><br><br>
+Crear o liberar las líneas base para uso interno y para la entrega al cliente.]]>
+    </string>
+    <string name="gestion_configuracion_SP13subpracticas">
+<![CDATA[ <br><br><b>Subprácticas</b><br><br>
+1. Obtener la autorización del Comité de Control de Configuración
+(CCB) antes de crear o liberar las líneas base de elementos de
+configuración.<br>
+2. Crear o liberar líneas base sólo de los elementos de configuración en
+el sistema de gestión de configuración.<br>
+3. Documentar el conjunto de elementos de configuración que están
+contenidos en una línea base.<br>
+4. Poner a disposición el conjunto actual de líneas base.<br>   ]]>
+    </string>
+    <string name="gestion_configuracion_SP21">
+<![CDATA[<br><br><b><h3>SG 2 Seguir y controlar los cambios</h3></b><br>
+        
+       Se siguen y se controlan los productos de trabajo bajo gestión de configuración.<br><br><b>
+       Las prácticas específicas de esta meta específica sirven para mantener
+las líneas base después de que estén establecidas por las prácticas específicas
+de la meta específica Establecer las líneas base.<br><br>
+<br>SP 2.1 Seguir las peticiones de cambio</b><br><br>
+Seguir las peticiones de cambio a los elementos de configuración.
+ ]]>
+    </string>
+    <string name="gestion_configuracion_SP21subpracticas">
+<![CDATA[
+        <br><br><b>Subprácticas</b><br><br>
+        1. Iniciar y registrar las peticiones de cambio en la base de datos de
+peticiones de cambio.<br>
+2. Analizar el impacto de los cambios y de las correcciones propuestas
+en las peticiones de cambio.<br>
+3. Clasificar y priorizar las peticiones de cambio.<br>
+4. Revisar las peticiones de cambio a tratar en la siguiente línea base con
+las partes interesadas relevantes y llegar a un acuerdo.<br>
+5. Seguir el estado de las peticiones de cambio hasta su cierre.]]>
+    </string>
+    <string name="gestion_configuracion_SP22">
+<![CDATA[
+        <br><br><b>SP 2.2 Controlar los elementos de configuración</b><br><br>
+        Controlar los cambios a los elementos de configuración.]]>
+    </string>
+    <string name="gestion_configuracion_SP22subpracticas">
+<![CDATA[
+        <br><br><b>Subprácticas</b><br><br>
+1. Controlar los cambios a los elementos de configuración a lo largo de
+la vida del producto o servicio.<br>
+2. Obtener la autorización apropiada antes que los elementos de configuración
+modificados sean introducidos en el sistema de gestión de
+configuración.<br>
+3. Realizar actividades de check-in y check-out de los elementos de
+configuración en el sistema de gestión de configuración para la incorporación
+de los cambios, de forma que se mantenga la exactitud y
+la integridad de los elementos de configuración.<br>
+4. Realizar revisiones para asegurar que los cambios no hayan causado
+efectos no deseados en las líneas base (p. ej., asegurar que los cambios
+no hayan comprometido la seguridad o la protección del sistema).<br>
+5. Registrar los cambios a los elementos de configuración y las razones
+de los cambios, según sea apropiado.<br>]]>
+    </string>
+    <string name="gestion_configuracion_SP31">
+<![CDATA[
+        <br><br><b><h3>SG 3 Establecer la integridad</h3></b><br>
+        Se establece y mantiene la integridad de las líneas base.<br><br>
+        
+        La integridad de las líneas base, establecida por los procesos asociados
+con la meta específica Establecer las líneas base, y mantenida por los
+procesos asociados con la meta específica Seguir y controlar los cambios,
+es tratada por las prácticas específicas de esta meta específica.
+       
+       <br><br><br><b>SP 3.1 Establecer los registros de gestión de configuración</b><br><br>
+Establecer y mantener los registros que describen los elementos de configuración.
+        ]]>
+    </string>
+    <string name="gestion_configuracion_SP31subpracticas">
+<![CDATA[
+        <br><br><b>Subprácticas</b><br><br>
+        1. Registrar las acciones de gestión de configuración con suficiente detalle
+para que se conozca el contenido y el estado de cada elemento de
+configuración, y para que se puedan recuperar versiones anteriores.<br>
+2. Asegurar que las partes interesadas relevantes tengan acceso y
+conocimiento del estado de configuración de los elementos de
+configuración.<br>
+3. Especificar la última versión de las líneas base.<br>
+4. Identificar la versión de los elementos de configuración que constituyen
+una línea base particular.<br>
+5. Describir las diferencias entre líneas base sucesivas.<br>
+6. Modificar, si procede, el estado y la historia (es decir, cambios y otras
+acciones) de cada elemento de configuración.<br>]]>
+    </string>
+    <string name="gestion_configuracion_SP32">
+<![CDATA[<br><br><b>SP 3.2 Realizar auditorías de configuración</b><br><br>
+Realizar auditorías de configuración para mantener la integridad de las líneas
+base de configuración.]]>
+    </string>
+    <string name="gestion_configuracion_SP32subpracticas">
+<![CDATA[
+        <br><br><b>Subprácticas</b><br><br>
+1. Evaluar la integridad de las líneas base.<br>
+2. Confirmar que los registros de gestión de configuración identifican
+correctamente los elementos de configuración.<br>
+3. Revisar la estructura y la integridad de los elementos en el sistema de
+gestión de configuración.<br>
+4. Confirmar que los elementos en el sistema de gestión de configuración
+son completos, correctos y consistentes.
+El contenido del sistema de gestión de configuración completo, correcto
+y consistente se basa en los requisitos indicados en el plan, así
+como en las peticiones de cambio aprobadas.<br>
+5. Confirmar el cumplimiento con los estándares y procedimientos aplicables
+de gestión de configuración.<br>
+6. Seguir los elementos de acción desde la auditoría hasta su cierre.]]>
+    </string>
+    <string name="medicion_analisis_SP11">
+<![CDATA[
+         <h1><b>MA - Medición y Análisis</b></h1><br>
+        <b>Propósito</b><br><br>El propósito de Medición y Análisis (MA) es desarrollar y mantener la
+capacidad de medición utilizada para dar soporte a las necesidades de
+información de la gerencia.
+
+<br><br><br><b><h3>SG1 - Alinear las actividades de medición y análisis</h3></b>
+Los objetivos y las actividades de medición están alineados con las necesidades
+de información y los objetivos identificados.<br><br>
+Las prácticas específicas bajo esta meta específica pueden tratarse simultáneamente
+o en cualquier orden.<br>
+<ul>
+<li>Cuando se establecen los objetivos de medición, a menudo los
+expertos prevén los criterios necesarios para especificar las medidas
+y los procedimientos de análisis. También consideran simultáneamente
+las restricciones impuestas por los procedimientos de
+recogida y de almacenamiento de datos.</li>
+<li>Con frecuencia es importante especificar los análisis esenciales
+a llevar a cabo antes de ocuparse de los detalles de la
+especificación de la medición, de la recogida de datos o del
+almacenamiento.</li>
+</ul>
+<br><br><br><b>SP 1.1 Establecer los objetivos de medición</b><br><br>
+Establecer y mantener los objetivos de medición derivados de las necesidades
+de información y de los objetivos identificados.]]>
+    </string>
+    <string name="medicion_analisis_SP11subpracticas">
+<![CDATA[ <br><br><b>Subprácticas</b><br><br>
+        1. Documentar las necesidades de información y los objetivos.<br>
+2. Priorizar las necesidades de información y los objetivos.<br>
+3. Documentar, revisar y actualizar los objetivos de medición.<br>
+4. Proporcionar realimentación para refinar y clarificar las necesidades
+de información y los objetivos cuando sea necesario.<br>
+5. Mantener la trazabilidad de los objetivos de medición con las necesidades
+de información y los objetivos identificados.<br>
+        ]]>
+    </string>
+    <string name="medicion_analisis_SP12">
+<![CDATA[<br><br><br><b>SP 1.2 Especificar las medidas</b><br><br>
+        Especificar las medidas para tratar los objetivos de medición.]]>
+    </string>
+    <string name="medicion_analisis_SP12subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Identificar las medidas candidatas en base a los objetivos de medición documentados.<br>
+2. Mantener la trazabilidad de las medidas con los objetivos de medición.<br>
+3. Identificar las medidas existentes que ya tratan los objetivos de medición.<br>
+4. Especificar las definiciones operativas para las medidas.<br>
+5. Priorizar, revisar y actualizar las medidas.    ]]>
+    </string>
+    <string name="medicion_analisis_SP13">
+<![CDATA[<br><br><br><b>SP 1.3 Especificar los procedimientos de recogida y de almacenamiento de datos</b><br><br>
+        Especificar cómo se obtienen y almacenan los datos de la medición.]]>
+    </string>
+    <string name="medicion_analisis_SP13subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Identificar las fuentes de datos existentes que se generan a partir de
+los productos de trabajo, los procesos o las transacciones actuales.<br>
+2. Identificar las medidas para las que se necesitan datos que no se encuentren
+disponibles en la actualidad.<br>
+3. Especificar cómo recoger y almacenar los datos para cada medida
+requerida.<br>
+4. Crear mecanismos de recogida de datos y orientaciones del proceso.<br>
+5. Dar soporte a la recogida automática de los datos según proceda y sea
+factible.<br>
+6. Priorizar, revisar y actualizar los procedimientos de recogida y de almacenamiento
+de datos.<br>
+7. Actualizar las medidas y los objetivos de medición según sea necesario.<br>]]>
+    </string>
+    <string name="medicion_analisis_SP14">
+<![CDATA[<br><br><br><b>SP 1.4 Especificar los procedimientos de análisis</b><br><br>
+        Especificar cómo se analizan y comunican los datos de medición.]]>
+    </string>
+    <string name="medicion_analisis_SP14subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Especificar y priorizar los análisis a realizar y los informes a preparar.<br>
+        2. Seleccionar los métodos y las herramientas apropiados de análisis
+de datos.<br>
+3. Especificar los procedimientos administrativos para el análisis de los
+datos y comunicar los resultados.<br>
+4. Revisar y actualizar el contenido y el formato propuesto de los análisis<br>
+e informes especificados.<br>
+5. Actualizar las medidas y los objetivos de medición según sea necesario.<br>
+6. Especificar los criterios para evaluar la utilidad de los resultados de
+análisis y para evaluar el comportamiento de las actividades de medición
+y análisis.]]>
+    </string>
+    <string name="medicion_analisis_SP21">
+<![CDATA[
+
+<br><br><br><b><h3>SG2 - Proporcionar los resultados de la medición</h3></b>
+Se proporcionan los resultados de la medición que tratan las necesidades de
+información y los objetivos identificados.<br><br>
+La razón principal para llevar a cabo la medición y análisis es tratar las
+necesidades de información identificadas, derivadas de los objetivos
+del proyecto, de la organización y del negocio. Los resultados de la medición
+basados en la evidencia objetiva pueden ayudar a monitorizar
+el progreso y el rendimiento, satisfacer las obligaciones documentadas
+en el acuerdo con el proveedor, tomar decisiones informadas técnicas
+y de gestión, y permitir la toma de acciones correctivas.
+
+<br><br><br><b>SP 2.1 Obtener los datos de la medición</b><br><br>
+Obtener los datos de la medición especificados.]]>
+    </string>
+    <string name="medicion_analisis_SP21subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Obtener los datos para las medidas base.<br>
+        2. Generar los datos para las medidas derivadas.<br>
+        3. Realizar las comprobaciones de integridad de datos lo más cerca posible
+a la fuente de los mismos.]]>
+    </string>
+    <string name="medicion_analisis_SP22">
+<![CDATA[
+<br><br><br><b>SP 2.2 Analizar los datos de la medición</b><br><br>    
+        Analizar e interpretar los datos de la medición.]]>
+    </string>
+    <string name="medicion_analisis_SP22subpracticas">
+<![CDATA[
+        <br><br><b>Subprácticas</b><br><br>
+        1. Llevar a cabo los análisis iniciales, interpretar los resultados y perfilar
+las conclusiones preliminares.<br>
+2. Llevar a cabo mediciones y análisis adicionales según sea necesario y
+preparar los resultados para su presentación.<br>
+3. Revisar los resultados iniciales con las partes interesadas relevantes.<br>
+4. Refinar los criterios para análisis futuros.<br>]]>
+    </string>
+    <string name="medicion_analisis_SP23">
+<![CDATA[
+       <br><br><br><b> SP 2.3 Almacenar los datos y los resultados</b><br><br>
+       Gestionar y almacenar los datos de la medición, las especificaciones de la medición
+y los resultados del análisis. ]]>
+    </string>
+    <string name="medicion_analisis_SP23subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Revisar los datos para asegurar que sean completos, íntegros, precisos
+y actuales.<br>
+2. Almacenar los datos conforme a los procedimientos de almacenamiento
+de datos.<br>
+3. Dejar disponibles los contenidos almacenados para uso exclusivo de
+grupos y miembros del personal apropiados.<br>
+4. Prevenir que la información almacenada sea utilizada inapropiadamente.]]>
+    </string>
+    <string name="medicion_analisis_SP24">
+<![CDATA[
+       <br><br><br><b>  SP 2.4 Comunicar los resultados</b><br><br>.
+       Comunicar los resultados de las actividades de medición y análisis a todas las
+partes interesadas relevantes.
+        ]]>
+    </string>
+    <string name="medicion_analisis_SP24subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Mantener informadas oportunamente a las partes interesadas relevantes
+de los resultados de la medición.<br>
+        2. Ayudar a las partes interesadas relevantes a entender los resultados.
+        
+        ]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP11">
+<![CDATA[
+    <h1><b>PMC - Monitorización y control del proyecto</b></h1><br>
+        <b>Propósito</b><br><br>El propósito de la Monitorización y Control del Proyecto (PMC) es
+proporcionar una comprensión del progreso del proyecto para que se
+puedan tomar las acciones correctivas apropiadas, cuando el rendimiento
+del proyecto se desvíe significativamente del plan.
+<br><br><br><b><h3>SG1 - Monitorizar el proyecto frente al plan</h3></b>
+El progreso y el rendimiento reales del proyecto se monitorizan frente al plan
+de proyecto.
+<br><br><br><b>SP 1.1 Monitorizar los parámetros de planificación del proyecto</b><br><br>
+Monitorizar los valores reales de los parámetros de planificación del proyecto
+frente al plan de proyecto.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP11subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Monitorizar el progreso frente al calendario.<br>
+        2. Monitorizar los costes y el esfuerzo empleado en el proyecto.<br>
+        3. Monitorizar los atributos de los productos de trabajo y de las tareas.<br>
+        4. Monitorizar los recursos proporcionados y los recursos utilizados.<br>
+        5. Monitorizar el conocimiento y las habilidades del personal del
+proyecto.<br>
+6. Documentar las desviaciones significativas en los parámetros de planificación
+del proyecto.<br>
+        ]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP12">
+<![CDATA[
+        <br><br><br><b>SP 1.2 Monitorizar los compromisos</b><br><br>
+        Monitorizar los compromisos frente a aquellos identificados en el plan de
+proyecto.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP12subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Revisar los compromisos (tanto externos como internos) con
+regularidad.<br>
+2. Identificar los compromisos que no se han cumplido o que están en
+riesgo significativo de no cumplirse.<br>
+3. Documentar los resultados de las revisiones de los compromisos.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP13">
+<![CDATA[
+        <br><br><br><b>SP 1.3 Monitorizar los riesgos del proyecto</b><br><br>
+        Monitorizar los riesgos frente a aquellos identificados en el plan de proyecto.
+        ]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP13subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Revisar periódicamente la documentación de riesgos en el contexto
+del estado y de las circunstancias actuales del proyecto.<br>
+2. Modificar la documentación de riesgos, a medida que se va disponiendo
+de información adicional.<br>
+3. Comunicar el estado de los riesgos a las partes interesadas relevantes.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP14">
+<![CDATA[
+        <br><br><br><b>SP 1.4 Monitorizar la gestión de los datos</b><br><br>
+        Monitorizar la gestión de los datos del proyecto frente al plan de proyecto.
+         ]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP14subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Revisar periódicamente las actividades de gestión de los datos frente
+a su descripción en el plan de proyecto.<br>
+2. Identificar y documentar las cuestiones significativas y sus impactos.<br>
+3. Documentar los resultados de las revisiones de las actividades de gestión
+de los datos.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP15">
+<![CDATA[
+        <br><br><br><b>SP 1.5 Monitorizar la involucración de las partes interesadas</b><br><br>
+        Monitorizar la involucración de las partes interesadas frente al plan de proyecto.
+         ]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP15subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+       1. Revisar periódicamente el estado de la involucración de las partes
+interesadas.<br>
+2. Identificar y documentar las cuestiones significativas y sus impactos.<br>
+3. Documentar los resultados de las revisiones del estado de la involucración
+de las partes interesadas.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP16">
+<![CDATA[
+        <br><br><br><b>SP 1.6 Llevar a cabo las revisiones del progreso</b><br><br>
+        Revisar periódicamente el progreso, el rendimiento y las cuestiones del proyecto.
+         ]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP16subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+        1. Comunicar con regularidad a las partes interesadas relevantes el estado
+de las actividades y los productos de trabajo asignados.<br>
+2. Revisar los resultados de la recogida y del análisis de las medidas para
+controlar el proyecto.<br>
+3. Identificar y documentar las cuestiones y las desviaciones significativas
+frente al plan.<br>
+4. Documentar las peticiones de cambio y los problemas identificados
+en los productos de trabajo y en los procesos.<br>
+5. Documentar los resultados de las revisiones.<br>
+6. Seguir las peticiones de cambio y los informes de problemas hasta su
+cierre.         ]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP17">
+<![CDATA[
+        <br><br><br><b>SP 1.7 Llevar a cabo las revisiones de hitos</b><br><br>
+        Revisar los logros y los resultados del proyecto en los hitos seleccionados del proyecto.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP17subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+     1. Llevar a cabo las revisiones de hitos con las partes interesadas relevantes
+en puntos significativos del calendario del proyecto, como por
+ejemplo, a la finalización de las fases seleccionadas.<br>
+2. Revisar los compromisos, el plan, el estado y los riesgos del proyecto.<br>
+3. Identificar y documentar las cuestiones significativas y sus impactos.<br>
+4. Documentar los resultados de la revisión, los elementos de acción y
+las decisiones.<br>
+5. Seguir los elementos de acción hasta su cierre.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP21">
+<![CDATA[
+<br><br><br><b><h3>SG 2 Gestionar las acciones correctivas hasta su cierre</h3></b>
+Las acciones correctivas se gestionan hasta su cierre cuando el rendimiento o
+los resultados del proyecto se desvían significativamente del plan.
+<br><br><br><b>SP 2.1 Analizar las cuestiones</b><br><br>
+Recopilar y analizar las cuestiones y determinar acciones correctivas para su
+tratamiento.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP21subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+    1. Recopilar las cuestiones para su análisis.<br>
+    2. Analizar las cuestiones para determinar la necesidad de acciones
+correctivas.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP22">
+<![CDATA[
+<br><br><br><b>SP 2.2 Llevar a cabo las acciones correctivas</b><br><br>
+Llevar a cabo la acción correctiva sobre las cuestiones identificadas.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP22subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Determinar y documentar las acciones apropiadas necesarias para
+tratar las cuestiones identificadas.<br>
+2. Revisar y obtener acuerdos con las partes interesadas relevantes sobre
+las acciones a tomar.<br>
+3. Negociar los cambios a los compromisos internos y externos.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP23">
+<![CDATA[
+<br><br><br><b>SP 2.3 Gestionar las acciones correctivas</b><br><br>
+Gestionar las acciones correctivas hasta su cierre.]]>
+    </string>
+    <string name="monitorizacion_control_proyecto_SP23subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Monitorizar las acciones correctivas hasta su finalización.<br>
+2. Analizar los resultados de las acciones correctivas para determinar su
+eficacia.<br>
+3. Determinar y documentar las acciones apropiadas para corregir las
+desviaciones producidas en los resultados planificados debido a las
+acciones correctivas realizadas.]]>
+    </string>
+    <string name="planificacion_proyecto_SP11">
+<![CDATA[
+    <h1><b>PP - Planificación del proyecto</b></h1><br>
+        <b>Propósito</b><br><br>El propósito de la Planificación del Proyecto (PP) es establecer y mantener
+planes que definan las actividades del proyecto.
+
+<br><br><br><b><h3>SG1 - Establecer las estimaciones</h3></b>
+Se establecen y mantienen las estimaciones de los parámetros de planificación
+del proyecto.<br><br>
+Los parámetros de la planificación del proyecto incluyen toda la información
+necesaria del proyecto para realizar la planificación, la organización,
+la asignación de personal, la dirección, la coordinación, la
+comunicación y la preparación de presupuestos necesarias.<br>
+Las estimaciones de los parámetros de planificación deberían tener
+una base sólida para infundir la confianza en que los planes basados
+en estas estimaciones son capaces de dar soporte a los objetivos del
+proyecto.<br>
+Algunos factores a considerar cuando se estiman estos parámetros
+son los requisitos del proyecto, incluyendo los requisitos del producto,
+los requisitos impuestos por la organización, los requisitos impuestos
+por el cliente y otros requisitos que afectan al proyecto.<br>
+La documentación del análisis razonado de la estimación y de los
+datos de soporte es necesaria para la revisión y el compromiso con el
+plan de las partes interesadas, y para el mantenimiento del plan a medida
+que el proyecto progresa.
+
+<br><br><br><b>SP 1.1 Estimar el alcance del proyecto</b><br><br>
+Establecer una estructura de descomposición del trabajo (WBS) de alto nivel
+para estimar el alcance del proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP11subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Desarrollar una WBS.<br>
+2. Definir los paquetes de trabajo con el detalle suficiente para que se
+puedan especificar las estimaciones de las tareas, las responsabilidades
+y el calendario del proyecto.<br>
+3. Identificar los productos y los componentes del producto a adquirir
+externamente.<br>
+4. Identificar los productos de trabajo a reutilizar.
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP12">
+<![CDATA[
+<br><br><br><b>SP 1.2 Establecer las estimaciones de los atributos de los productos de trabajo y de las tareas</b><br><br>
+Establecer y mantener las estimaciones de los atributos de los productos de trabajo
+y de las tareas.]]>
+    </string>
+    <string name="planificacion_proyecto_SP12subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Determinar la aproximación técnica para el proyecto.<br>
+2. Usar métodos apropiados para determinar los atributos de los productos
+de trabajo y de las tareas a utilizar para estimar los requisitos de recursos.<br>
+3. Estimar los atributos de los productos de trabajo y de las tareas.<br>
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP13">
+<![CDATA[
+<br><br><br><b>SP 1.3 Definir las fases del ciclo de vida del proyecto</b><br><br>
+Definir las fases del ciclo de vida del proyecto sobre las que encuadrar el esfuerzo
+a planificar.]]>
+    </string>
+    <string name="planificacion_proyecto_SP14">
+<![CDATA[
+<br><br><br><b>SP 1.4 Estimar el esfuerzo y el coste</b><br><br>
+Estimar el esfuerzo y el coste del proyecto para los productos de trabajo y para
+las tareas, basándose en el análisis razonado de la estimación.]]>
+    </string>
+    <string name="planificacion_proyecto_SP14subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Recopilar los modelos o los datos históricos a utilizar para transformar
+los atributos de los productos de trabajo y de las tareas en estimaciones
+de horas de trabajo y de coste.<br>
+2. Incluir las necesidades de la infraestructura de soporte al estimar el
+esfuerzo y el coste.<br>
+3. Estimar el esfuerzo y el coste usando modelos, datos históricos, o una
+combinación de ambos.<br>
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP21">
+<![CDATA[
+
+<br><br><br><b><h3>SG - 2 Desarrollar un plan de proyecto</h3></b><br><br>
+Se establece y mantiene un plan de proyecto como base para gestionar el
+proyecto.
+
+<br><br><br><b>SP 2.1 Establecer el presupuesto y el calendario</b><br><br>
+Establecer y mantener el presupuesto y el calendario del proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP21subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Identificar los principales hitos.<br>
+2. Identificar los supuestos del calendario.<br>
+3. Identificar las restricciones.<br>
+4. Identificar las dependencias entre las tareas.<br>
+5. Establecer y mantener el presupuesto y el calendario.<br>
+6. Establecer los criterios de las acciones correctivas.
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP22">
+<![CDATA[
+<br><br><br><b>SP 2.2 Identificar los riesgos del proyecto</b><br><br>
+Identificar y analizar los riesgos del proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP22subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Identificar los riesgos.<br>
+2. Documentar riesgos.<br>
+3. Revisar y obtener el acuerdo con las partes interesadas relevantes sobre
+la completitud y exactitud de los riesgos documentados.<br>
+4. Modificar los riesgos según sea apropiado.<br>
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP23">
+<![CDATA[
+<br><br><br><b>SP 2.3 Planificar la gestión de los datos</b><br><br>
+Planificar la gestión de los datos del proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP23subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Establecer los requisitos y los procedimientos para asegurar la privacidad
+y la seguridad de los datos.<br>
+2. Establecer un mecanismo para almacenar los datos y acceder a los
+datos almacenados.<br>
+3. Determinar los datos del proyecto que serán identificados, recogidos
+y distribuidos.<br>
+4. Determinar los requisitos para proporcionar el acceso a los datos y su
+distribución a las partes interesadas relevantes.<br>
+5. Decidir qué datos y planes del proyecto requieren control de versión
+u otros niveles de control de configuración y establecer mecanismos
+para asegurar que los datos del proyecto se controlan.
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP24">
+<![CDATA[
+<br><br><br><b>SP 2.4 Planificar los recursos del proyecto</b><br><br>
+Planificar los recursos para realizar el proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP24subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Determinar los requisitos del proceso.<br>
+2. Determinar los requisitos de comunicación.<br>
+3. Determinar los requisitos de personal.<br>
+4. Determinar los requisitos de instalaciones, equipamiento y componentes.<br>
+5. Determinar otros requisitos de recursos continuos.<br>
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP25">
+<![CDATA[
+<br><br><br><b>SP 2.5 Planificar el conocimiento y las habilidades necesarias</b><br><br>
+Planificar las necesidades de conocimiento y de habilidades para realizar el proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP25subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Identificar el conocimiento y las habilidades necesarios para realizar
+el proyecto.<br>
+2. Evaluar el conocimiento y las habilidades disponibles.<br>
+3. Seleccionar los mecanismos para proporcionar el conocimiento y las
+habilidades necesarias.<br>
+4. Incorporar los mecanismos seleccionados en el plan de proyecto.
+]]>
+    </string>
+    <string name="planificacion_proyecto_SP26">
+<![CDATA[
+<br><br><br><b>SP 2.6 Planificar la involucración de las partes interesadas</b><br><br>
+Planificar la involucración de las partes interesadas identificadas.]]>
+    </string>
+    <string name="planificacion_proyecto_SP27">
+<![CDATA[
+<br><br><br><b>SP 2.7 Establecer el plan de proyecto</b><br><br>
+Establecer y mantener el plan global del proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP31">
+<![CDATA[
+
+<br><br><br><b><h3>SG - 3 Obtener el compromiso con el plan</h3></b>
+Se establecen y mantienen los compromisos con el plan de proyecto.
+<br><br>Para ser eficaces, los planes requieren el compromiso de aquellos que
+son responsables de implementar y dar soporte al plan.
+<br><br><br><b>SP 3.1 Revisar los planes que afectan al proyecto</b><br><br>
+Revisar todos los planes que afectan al proyecto para comprender los compromisos
+del proyecto.]]>
+    </string>
+    <string name="planificacion_proyecto_SP32">
+<![CDATA[
+<br><br><br><b>SP 3.2 Conciliar los niveles de trabajo y de recursos</b><br><br>
+Ajustar el plan de proyecto para conciliar los recursos disponibles y los
+estimados.]]>
+    </string>
+    <string name="planificacion_proyecto_SP33">
+<![CDATA[
+<br><br><br><b>SP 3.3 Obtener el compromiso con el plan</b><br><br>
+Obtener el compromiso de las partes interesadas relevantes responsables de
+realizar y de dar soporte a la ejecución del plan.]]>
+    </string>
+    <string name="planificacion_proyecto_SP33subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Identificar el soporte necesario y negociar los compromisos con las
+partes interesadas relevantes.<br>
+2. Documentar todos los compromisos de la organización, tanto definitivos
+como provisionales, asegurando el nivel apropiado de
+firmantes.<br>
+3. Revisar los compromisos internos con la alta dirección según sea
+apropiado.<br>
+4. Revisar los compromisos externos con la alta dirección según sea
+apropiado.<br>
+5. Identificar los compromisos relacionados con las interfaces entre los
+elementos del proyecto y otros proyectos y unidades de la organización,
+de tal forma que estos compromisos puedan ser monitorizados.
+]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP11">
+<![CDATA[
+    <h1><b>PPQA - Aseguramiento de la calidad del proceso y del producto</b></h1><br>
+        <b>Propósito</b><br><br>El propósito del Aseguramiento de la Calidad del Proceso y del Producto
+(PPQA) es proporcionar al personal y a la gerencia una visión
+objetiva de los procesos y de los productos de trabajo asociados.
+
+<br><br><br><b><h3>SG1 - Evaluar objetivamente los procesos y los productos de trabajo</h3></b>
+<br><br>Se evalúa objetivamente la adherencia de los procesos realizados y de los productos
+de trabajo asociados a las descripciones de proceso, estándares y procedimientos
+aplicables.
+
+<br><br><br><b>SP 1.1 Evaluar objetivamente los procesos</b><br><br>
+Evaluar objetivamente los procesos realizados seleccionados frente a las descripciones
+de proceso, estándares y procedimientos aplicables.]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP11subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Promover un entorno (creado como parte de la gestión del proyecto)
+que incentive la participación del personal en la identificación y comunicación
+de las cuestiones de calidad.<br>
+2. Establecer y mantener criterios claramente indicados para las
+evaluaciones.<br>
+3. Utilizar los criterios indicados para evaluar la adherencia de los procesos
+realizados y seleccionados frente a las descripciones de proceso,
+estándares y procedimientos.<br>
+4. Identificar cada no conformidad encontrada durante la evaluación.<br>
+5. Identificar las lecciones aprendidas que podrían mejorar los procesos.
+]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP12">
+<![CDATA[
+<br><br><br><b>SP 1.2 Evaluar objetivamente los productos de trabajo</b><br><br>
+Evaluar objetivamente los productos de trabajo seleccionados frente a las descripciones
+de proceso, estándares y procedimientos aplicables.]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP12subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Seleccionar los productos de trabajo a evaluar, en base a criterios de
+muestreo documentados en caso de usar muestreo.<br>
+2. Establecer y mantener criterios claramente establecidos para la evaluación
+de los productos de trabajo seleccionados.<br>
+3. Utilizar los criterios indicados durante las evaluaciones de los productos
+de trabajo seleccionados.<br>
+4. Evaluar los productos de trabajo seleccionados en los momentos
+escogidos.
+5. Identificar cada caso de no conformidad encontrado durante las
+evaluaciones.<br>
+6. Identificar las lecciones aprendidas que podrían mejorar los procesos.
+]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP21">
+<![CDATA[
+<br><br><br><b><h3>SG2 - Proporcionar una visión objetiva</h3></b><br><br>
+Las no conformidades se siguen y comunican de forma objetiva, y se asegura
+su resolución.
+
+<br><br><br><b>SP 2.1 Comunicar y resolver las no conformidades</b><br><br>
+Comunicar las cuestiones de calidad y asegurar la resolución de las no conformidades
+con el personal y con los gerentes.]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP21subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Resolver cada no conformidad con los miembros apropiados del personal
+si es posible.<br>
+2. Documentar las no conformidades cuando no puedan resolverse en
+el proyecto.<br>
+3. Escalar las no conformidades que no puedan resolverse en el proyecto
+al nivel de gerencia apropiado designado para recibir las no
+conformidades y actuar sobre ellas.<br>
+4. Analizar las no conformidades para ver si existen tendencias de calidad
+que pueden identificarse y tratarse.<br>
+5. Asegurar que las partes interesadas relevantes están al corriente de
+los resultados de las evaluaciones y de las tendencias de calidad de
+manera oportuna.<br>
+6. Revisar periódicamente las no conformidades abiertas y las tendencias
+con el gerente designado para recibir las no conformidades y
+actuar sobre ellas.<br>
+7. Seguir las no conformidades hasta su resolución.
+]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP22">
+<![CDATA[
+<br><br><br><b>SP 2.2 Establecer los registros</b><br><br>
+Establecer y mantener los registros de las actividades de aseguramiento de la
+calidad.]]>
+    </string>
+    <string name="aseguramiento_calidad_proceso_producto_SP22subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Registrar las actividades de aseguramiento de la calidad del proceso
+y del producto con suficiente detalle, de forma que sean conocidos el
+estado y los resultados.<br>
+2. Modificar el estado y la historia de las actividades de aseguramiento
+de la calidad, según sea necesario.
+]]>
+    </string>
+    <string name="gestion_requisitos_SP11">
+<![CDATA[
+    <h1><b>REQM - Gestión de requisitos</b></h1><br>
+        <b>Propósito</b><br><br>El propósito de la Gestión de Requisitos (REQM) es gestionar los requisitos
+de los productos y los componentes de producto del proyecto,
+y asegurar la alineación entre esos requisitos, y los planes y los productos
+de trabajo del proyecto.
+
+<br><br><br><b><h3>SG - 1 Gestionar los requisitos</h3></b><br><br>
+Los requisitos se gestionan y las inconsistencias con los planes y productos de
+trabajo del proyecto se identifican.
+
+<br><br><br><b>SP 1.1 Comprender los requisitos</b><br><br>
+Desarrollar una comprensión del significado de los requisitos con los proveedores
+de los requisitos.]]>
+    </string>
+    <string name="gestion_requisitos_SP11subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Establecer criterios para distinguir a los proveedores apropiados de
+requisitos.<br>
+2. Establecer criterios objetivos para la evaluación y aceptación de los
+requisitos.<br>
+3. Analizar los requisitos para asegurar que se cumplen los criterios
+establecidos.<br>
+4. Alcanzar una comprensión de los requisitos con los proveedores de
+requisitos para que los participantes del proyecto puedan comprometerse
+con ellos.
+]]>
+    </string>
+    <string name="gestion_requisitos_SP12">
+<![CDATA[
+
+<br><br><br><b>SP 1.2 Obtener el compromiso sobre los requisitos</b><br><br>
+Obtener el compromiso de los participantes del proyecto sobre los requisitos.]]>
+    </string>
+    <string name="gestion_requisitos_SP12subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Evaluar el impacto de los requisitos sobre los compromisos existentes.<br>
+2. Negociar y registrar los compromisos.
+]]>
+    </string>
+    <string name="gestion_requisitos_SP13">
+<![CDATA[
+<br><br><br><b>SP 1.3 Gestionar los cambios a los requisitos</b><br><br>
+Gestionar los cambios a los requisitos a medida que evolucionan durante el
+proyecto.]]>
+    </string>
+    <string name="gestion_requisitos_SP13subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Documentar todos los requisitos y los cambios a los requisitos que
+se reciben o generan por el proyecto.<br>
+2. Mantener una historia de cambios de los requisitos, incluyendo el
+análisis razonado de los cambios.<br>
+3. Evaluar el impacto de los cambios de requisitos desde el punto de
+vista de las partes interesadas relevantes.<br>
+4. Poner a disposición del proyecto los requisitos y los datos de los
+cambios.
+]]>
+    </string>
+    <string name="gestion_requisitos_SP14">
+<![CDATA[
+<br><br><br><b>SP 1.4 Mante ner la trazabilidad bidireccional de los requisitos</b><br><br>
+Mantener la trazabilidad bidireccional entre los requisitos y los productos de
+trabajo.]]>
+    </string>
+    <string name="gestion_requisitos_SP14subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Mantener la trazabilidad de los requisitos para asegurar que la
+fuente de los requisitos de nivel más bajo (es decir, inferidos) está
+documentada.<br>
+2. Mantener la trazabilidad de los requisitos desde un requisito a sus
+requisitos inferidos y a la asignación a los productos de trabajo.<br>
+3. Generar una matriz de trazabilidad de requisitos.
+]]>
+    </string>
+    <string name="gestion_requisitos_SP15">
+<![CDATA[
+<br><br><br><b>SP 1.5 Asegurar el alineamiento entre el trabajo del proyecto y los requisitos</b><br><br>
+Asegurar que los planes del proyecto y los productos de trabajo permanecen
+alineados con los requisitos.]]>
+    </string>
+    <string name="gestion_requisitos_SP15subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Revisar los planes del proyecto, las actividades y los productos de
+trabajo en cuanto a la consistencia con los requisitos y los cambios
+realizados sobre ellos.<br>
+2. Identificar la fuente de la inconsistencia (si existe).<br>
+3. Identificar cualquier cambio que se debería realizar a los planes y a
+los productos de trabajo resultantes de los cambios a la línea base
+de requisitos.<br>
+4. Iniciar cualquier acción correctiva necesaria.
+]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP11">
+<![CDATA[
+    <h1><b>SAM - Gestión de acuerdos con proveedores</b></h1><br>
+        <b>Propósito</b><br><br>
+        	El propósito de la Gestión de Acuerdos con Proveedores (SAM) es gestionar
+la adquisición de productos y servicios de proveedores.
+
+<br><br><br><b><h3>SG1 - Establecer acuerdos con proveedores</h3></b><br>
+Los acuerdos con los proveedores se establecen y mantienen.
+
+<br><br><br><b>SP 1.1 Determinar el tipo de adquisición</b><br><br>
+Determinar el tipo de adquisición para cada producto o componente de producto
+a adquirir.]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP12">
+<![CDATA[
+<br><br><br><b>SP 1.2 Seleccionar a los proveedores</b><br><br>
+Seleccionar a los proveedores en base a una evaluación de su capacidad para
+cumplir los requisitos especificados y los criterios establecidos.]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP12subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Establecer y documentar los criterios para la evaluación de proveedores
+potenciales.<br>
+2. Identificar proveedores potenciales y enviarles el material y los requisitos
+de solicitud.<br>
+3. Evaluar propuestas conforme a los criterios de evaluación.<br>
+4. Evaluar los riesgos asociados con cada proveedor propuesto.<br>
+5. Evaluar las capacidades de los proveedores propuestos para realizar
+el trabajo.
+]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP13">
+<![CDATA[
+<br><br><br><b>SP 1.3 Establecer acuerdos con proveedores</b><br><br>
+Establecer y mantener los acuerdos con proveedores.]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP13subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Modificar los requisitos (p. ej., requisitos de producto, requisitos
+de nivel de servicio) a realizar por el proveedor cuando sea necesario
+para reflejar las negociaciones con el proveedor.<br>
+2. Documentar lo que el proyecto proporcionará al proveedor.<br>
+3. Documentar el acuerdo con el proveedor.<br>
+4. Revisar periódicamente el acuerdo con el proveedor para asegurar
+que refleja exactamente la relación del proyecto con el proveedor, y
+los riesgos y las condiciones de mercado actuales.<br>
+5. Asegurar que todas las partes del el acuerdo con el proveedor comprenden
+y aceptan todos los requisitos antes de implementar el
+acuerdo o cualquier cambio.<br>
+6. Modificar el acuerdo con el proveedor, según sea necesario, para reflejar
+los cambios a los procesos o productos de trabajo del proveedor.<br>
+7. Modificar los planes y compromisos del proyecto, incluyendo los
+cambios a los procesos o a los productos de trabajo del proyecto
+según sea necesario, para reflejar el acuerdo con el proveedor.
+]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP21">
+<![CDATA[
+
+<br><br><br><b><h3>SG2 - Satisfacer los acuerdos con los proveedores</h3></b><br><br>
+Los acuerdos con los proveedores se satisfacen tanto por el proyecto como por
+el proveedor.
+
+<br><br><br><b>SP 2.1 Ejecutar el acuerdo con el proveedor</b><br><br>
+Realizar las actividades con el proveedor tal y como se especifica en el acuerdo
+con el proveedor.]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP21subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Monitorizar el progreso y el desempeño del proveedor (p. ej., calendario,
+esfuerzo, coste, rendimiento técnico), según se define en
+el acuerdo con el proveedor.<br>
+2. Seleccionar, monitorizar y analizar los procesos usados por el proveedor
+según se define en el acuerdo con el proveedor.<br>
+3. Seleccionar y evaluar los productos de trabajo del proveedor según
+se define en el acuerdo con el proveedor.<br>
+4. Llevar a cabo revisiones con el proveedor según se especifica en el
+acuerdo con el proveedor.<br>
+5. Llevar a cabo revisiones técnicas con el proveedor según se defina
+en el acuerdo con el proveedor.<br>
+6. Llevar a cabo revisiones de gestión con el proveedor, según se defina
+en el acuerdo con el proveedor.<br>
+7. Usar los resultados de las revisiones para mejorar el desempeño del
+proveedor, y para establecer y fomentar las relaciones a largo plazo
+con los proveedores preferentes.<br>
+8. Monitorizar los riesgos que involucran al proveedor y tomar las
+acciones correctivas según sea necesario.
+]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP22">
+<![CDATA[
+
+<br><br><br><b>SP 2.2 Aceptar el producto adquirido</b><br><br>
+Asegurar que el acuerdo con el proveedor se cumple antes de aceptar el producto
+adquirido.]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP22subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Definir los procedimientos de aceptación.<br>
+2. Revisar y obtener el acuerdo con las partes interesadas relevantes
+sobre los procedimientos de aceptación antes de la revisión o prueba
+de aceptación.<br>
+3. Verificar que los productos adquiridos satisfacen sus requisitos.<br>
+4. Confirmar que se satisfacen los compromisos no técnicos asociados
+con el producto de trabajo adquirido.<br>
+5. Documentar los resultados de la revisión o prueba de aceptación.<br>
+6. Establecer un plan de acción y obtener el acuerdo con el proveedor
+para tomar acciones con el objeto de corregir los productos de trabajo
+adquiridos que no pasen su revisión o pruebas de aceptación.<br>
+7. Identificar, documentar y seguir los elementos de acción hasta el cierre.
+]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP23">
+<![CDATA[
+
+<br><br><br><b>SP 2.3 Asegurar la transición de los productos</b><br><br>
+Asegurar la transición de los productos adquiridos del proveedor.]]>
+    </string>
+    <string name="gestion_acuerdos_proveedores_SP23subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Asegurar que hay instalaciones para recibir, almacenar, integrar y
+mantener los productos adquiridos según sea apropiado.<br>
+2. Asegurar que se proporciona la formación apropiada a aquellos involucrados
+en la recepción, almacenamiento, integración y mantenimiento
+de los productos adquiridos.<br>
+3. Asegurar que se almacenan, distribuyen e integran los productos
+adquiridos de acuerdo a los términos y condiciones especificados
+en el acuerdo o licencia con el proveedor.
+]]>
+    </string>
+    <string name="generic_GP21">
+<![CDATA[
+
+<br><br><b><h3>GG2 - Institucionalizar un proceso gestionado</h3></b>
+
+El proceso está institucionalizado como un proceso gestionado.
+
+<br><br><br><b>GP 2.1 Establecer una política de la organización</b><br><br>
+Establecer y mantener una política de la organización para planificar y realizar
+el proceso.]]>
+    </string>
+    <string name="generic_GP22">
+<![CDATA[
+<br><br><br><b>GP 2.2 Planificar el proceso</b><br><br>
+Establecer y mantener el plan para realizar el proceso.]]>
+    </string>
+    <string name="generic_GP22subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Definir y documentar el plan para realizar el proceso.<br>
+2. Definir y documentar la descripción del proceso.<br>
+3. Revisar el plan con las partes interesadas relevantes y obtener su
+acuerdo.<br>
+4. Modificar el plan según sea necesario.
+]]>
+    </string>
+    <string name="generic_GP23">
+<![CDATA[
+<br><br><br><b>GP 2.3 Proporcionar recursos</b><br><br>
+Proporcionar recursos adecuados para realizar el proceso, desarrollar los productos
+de trabajo y proporcionar los servicios del proceso.]]>
+    </string>
+    <string name="generic_GP24">
+<![CDATA[
+<br><br><br><b>GP 2.4 Asignar responsabilidad</b><br><br>
+Asignar la responsabilidad y la autoridad para realizar el proceso, desarrollar
+los productos de trabajo y proporcionar los servicios del proceso.]]>
+    </string>
+    <string name="generic_GP24subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Asignar la responsabilidad y la autoridad globalmente para realizar
+el proceso.<br>
+2. Asignar la responsabilidad y la autoridad para realizar las tareas específicas
+del proceso.<br>
+3. Confirmar que las personas a las que se ha asignado la responsabilidad
+y la autoridad las comprenden y las aceptan.
+]]>
+    </string>
+    <string name="generic_GP25">
+<![CDATA[
+<br><br><br><b>GP 2.5 Formar al personal</b><br><br>
+Formar a las personas para realizar o dar soporte al proceso según
+sea necesario.]]>
+    </string>
+    <string name="generic_GP26">
+<![CDATA[
+<br><br><br><b>GP 2.6 Controlar los productos de trabajo</b><br><br>
+Poner los productos de trabajo seleccionados del proceso bajo los niveles de
+control apropiados.]]>
+    </string>
+    <string name="generic_GP27">
+<![CDATA[
+<br><br><br><b>GP 2.7 Identificar e involucrar a las partes interesadas relevantes</b><br><br>
+Identificar e involucrar a las partes interesadas relevantes del proceso, según
+lo planificado.]]>
+    </string>
+    <string name="generic_GP27subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Identificar a las partes interesadas relevantes a este proceso y la involucración
+apropiada.<br>
+2. Comunicar las partes interesadas relevantes identificadas a las personas
+que planifican el proyecto y otros planes, según proceda.<br>
+3. Involucrar a las partes interesadas relevantes según lo planificado.
+]]>
+    </string>
+    <string name="generic_GP28">
+<![CDATA[
+<br><br><br><b>GP 2.8 Monitorizar y controlar el proceso</b><br><br>
+Monitorizar y controlar el proceso frente al plan para realizar el proceso y tomar
+las acciones correctivas apropiadas.]]>
+    </string>
+    <string name="generic_GP28subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Evaluar el progreso y el rendimiento reales frente al plan de realización
+del proceso.<br>
+2. Revisar los logros y los resultados del proceso frente al plan de realización
+del proceso.<br>
+3. Revisar las actividades, el estado y los resultados del proceso con el
+nivel de gerencia más cercano al responsable del proceso e identificar
+las cuestiones.<br>
+4. Identificar y evaluar los efectos de las desviaciones significativas del
+plan de realización del proceso.<br>
+5. Identificar los problemas en el plan de realización del proceso y en la
+ejecución del proceso.<br>
+6. Tomar acciones correctivas cuando no se satisfacen los requisitos y
+los objetivos, cuando se identifican las cuestiones o cuando el progreso
+difiere significativamente del plan de realización del proceso.<br>
+7. Seguir las acciones correctivas hasta su cierre.
+]]>
+    </string>
+    <string name="generic_GP29">
+<![CDATA[
+<br><br><br><b>GP 2.9 Evaluar objetivamente la adherencia</b><br><br>
+Evaluar objetivamente la adherencia del proceso y de los productos de trabajo
+seleccionados frente a la descripción del proceso, estándares y procedimientos,
+y tratar las no conformidades.]]>
+    </string>
+    <string name="generic_GP210">
+<![CDATA[
+<br><br><br><b>GP 2.10 Revisar el estado con el nivel directivo</b><br><br>
+Revisar con el nivel directivo las actividades, el estado y los resultados del proceso
+y resolver las cuestiones.]]>
+    </string>
+    <string name="generic_GP31">
+<![CDATA[
+<br><br><br><b><h3>GG3 - Institucionalizar un proceso definido</h3></b>
+El proceso está institucionalizado como un proceso definido.
+<br><br><br><b>GP 3.1 Establecer un proceso definido</b><br><br>
+Establecer y mantener la descripción de un proceso definido.]]>
+    </string>
+    <string name="generic_GP31subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Seleccionar del conjunto de procesos estándar de la organización
+aquellos procesos que cubran el área de proceso y que mejor satisfagan
+las necesidades del proyecto o función de la organización.<br>
+2. Establecer el proceso definido adaptando los procesos seleccionados
+de acuerdo con las guías de adaptación de la organización.<br>
+3. Asegurar que los objetivos del proceso de la organización se tratan de
+forma apropiada en el proceso definido.<br>
+4. Documentar el proceso definido y los registros de la adaptación.<br>
+5. Modificar la descripción del proceso definido según sea necesario.
+]]>
+    </string>
+    <string name="generic_GP32">
+<![CDATA[
+<br><br><br><b>GP 3.2 Recoger experiencias relativas al proceso</b><br><br>
+Recoger experiencias relativas al proceso procedentes de la planificación y realización
+del proceso para dar soporte al uso futuro y a la mejora de los procesos
+y de los activos de proceso de la organización.]]>
+    </string>
+    <string name="generic_GP32subpracticas">
+<![CDATA[<br><br><b>Subprácticas</b><br><br>
+1. Almacenar medidas del proceso y del producto en el repositorio de
+mediciones de la organización.<br>
+2. Remitir la documentación para su inclusión en la biblioteca de activos
+de proceso de la organización.<br>
+3. Documentar las lecciones aprendidas del proceso para su inclusión
+en la biblioteca de activos de proceso de la organización.<br>
+4. Proponer mejoras a los activos de proceso de la organización.
+]]>
+    </string>
+    <string name="introduccion_evaluacion_continua">
+<![CDATA[<b><h>Representación continua</h3></b>
+<br>
+<br>
+La representación continua se ocupa de seleccionar tanto un área
+de proceso particular a mejorar como el nivel de capacidad deseado
+para ese área de proceso. Se alcanza un nivel de capacidad para un área de proceso cuando
+se satisfacen todas las metas genéricas hasta ese nivel.
+]]>
+    </string>
+    <string name="introduccion_evaluacion_etapas">
+<![CDATA[<b><h>Representación por etapas</h3></b>
+<br>
+<br>
+La representación por etapas se ocupa de seleccionar múltiples
+áreas de proceso a mejorar dentro de un nivel de madurez; no es su
+interés principal que los procesos individuales se realicen o estén incompletos.
+Un nivel de madurez consta de prácticas específicas y genéricas
+relacionadas para un conjunto predefinido de áreas de proceso
+que mejoran el rendimiento global de la organización.
+]]>
+    </string>
+    
+    <string name="niveles_capacidad">
+       Esta gráfica informativa se centra en mostrar las debilidades de cada área de proceso.
+       Un área de proceso que no haya sido totalmente evaluada o cuyas prácticas específicas
+       no hayan sido total o ampliamente alcanzadas tendrá un nivel 0. Si todas las 
+       prácticas específicas han sido total o ampliamente alcanzadas, el área de proceso tendrá
+       un nivel de 1. Si además todas las prácticas genéricas correspondientes al Objetivo Genérico
+       2 (GG 2) están amplia o totalmente alcanzadas, el área de proceso tendrá nivel 2.
+       Finalmente, para que un área de proceso esté a nivel 3 todas sus prácticas, tanto genéricas como
+       específicas, deben estar totalmente alcanzadas. Un área de proceso a nivel 3 no tiene debilidades.
+        
+        
+        
+    </string>
+    <string name="button_eliminar">Eliminar</string>
+    <string name="title_activity_consultar_evaluaciones">Datos de las evaluaciones</string>
+    <string name="n_evaluacion">Nueva evaluación</string>
+    <string name="alcanzado">¿Se ha alcanzado?:</string>
+    <string name="no_alcanzado">No alcanzado</string>
+    <string name="notas_evaluacion">Notas de la evaluación:</string>
+    <string name="fortalezas">Fortalezas:</string>
+    <string name="debilidades">Debilidades:</string>
+    <string name="ejemplos_productos_trabajo">Ejemplos de productos de trabajo:</string>
+    <string name="elementos_configuracion_identificados">1. Elementos de configuración identificados.</string>
+    <string name="notas_detalles">"Notas y detalles: "</string>
+    <string name="title_activity_medicion_analisis">MA - Medición y análisis</string>
+    <string name="title_activity_monitorizacion_control_proyecto">PMC - Monitorización y control del proyecto</string>
+    <string name="title_activity_planificacion_proyecto">PP - Planificación del proyecto</string>
+    <string name="title_activity_aseguramiento_calidad_proceso_producto">PPQA - Aseguramiento de la calidad del proceso y del producto</string>
+    <string name="title_activity_gestion_requisitos">REQM - Gestión de requisitos</string>
+    <string name="title_activity_gestion_acuerdos_proveedores">SAM - Gestión de acuerdos con proveedores</string>
+    <string name="title_activity_planificacion_proyecto2">Planificacion_proyecto2</string>
+    <string name="title_activity_planificacion_proyecto_2">Planificacion_proyecto_2</string>
+    <string name="title_activity_aseguramiento_calidad_proceso_producto_2">Aseguramiento_calidad_proceso_producto_2</string>
+    <string name="title_activity_nueva_evaluacion_etapas">Nueva evaluación por etapas</string>
+    <string name="title_activity_nueva_evaluacion_continua">Nueva evaluación continua</string>
+    <string name="title_activity_acerca_de">Acerca de CMMI Helper</string>
+    <string name="title_activity_plot">Plot</string>
+    <string name="title_activity_plot2">Plot2</string>
+
+</resources>
