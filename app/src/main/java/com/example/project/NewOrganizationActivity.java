@@ -195,7 +195,7 @@ public class NewOrganizationActivity extends Activity {
 
                         Intent intent = new Intent(
                             NewOrganizationActivity.this,
-                            Nueva_evaluacion.class);
+                            NewEvaluationActivity.class);
                         intent.putExtra("nombre_org",
                             nombreOrg);
                         NewOrganizationActivity.this

@@ -1283,13 +1283,13 @@ public class Gestion_acuerdos_proveedores extends Activity {
 
         if (area.equals("CM")) {
           Intent intent = new Intent(Gestion_acuerdos_proveedores.this,
-              Gestion_configuracion.class);
+              ConfigurationManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Gestion_acuerdos_proveedores.this.startActivity(intent);
         }
         if (area.equals("MA")) {
           Intent intent = new Intent(Gestion_acuerdos_proveedores.this,
-              Medicion_analisis.class);
+              MeasurementAnalysisManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Gestion_acuerdos_proveedores.this.startActivity(intent);
         }

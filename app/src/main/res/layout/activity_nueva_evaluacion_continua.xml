@@ -1,393 +1,387 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:baselineAligned="false"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  tools:context=".Nueva_evaluacion_continua">
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:layout_width="231dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notas de la evaluación"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="22sp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Nombre:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14sp" />
+
+      <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:ems="10"
+        android:hint="Nombre de la evaluación..."
+        android:inputType="textCapSentences"
+        android:textSize="14sp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Fecha:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14sp" />
+
+      <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:ems="10"
+        android:hint="Fecha de la evaluación..."
+        android:inputType="textMultiLine"
+        android:textSize="14sp"></EditText>
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/notas"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="14sp" />
+
+      <EditText
+        android:id="@+id/notasEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:ems="10"
+        android:hint="Notas de la evaluación..."
+        android:inputType="textCapSentences"
+        android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="231dp"
+      android:layout_height="match_parent"
+      android:gravity="bottom"
+      android:orientation="vertical">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/ayuda_cmmi"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="22sp" />
+
+      <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ayuda_cmmi" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:baselineAligned="false"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Nueva_evaluacion_continua" >
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+    <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="30dp"
+      android:layout_weight="0.35"
+      android:text="Seleccionar áreas de proceso"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textSize="22sp" />
 
-        <LinearLayout
-            android:layout_width="231dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+    <ScrollView
+      android:id="@+id/scrollView1"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginLeft="40dp"
+      android:layout_weight="4"
+      android:fadeScrollbars="false">
 
-            <TextView
-                android:id="@+id/notasEvaluacion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Notas de la evaluación"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="22sp" />
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="Nombre:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:hint="Nombre de la evaluación..."
-                android:inputType="textCapSentences"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="Fecha:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:hint="Fecha de la evaluación..."
-                android:inputType="textMultiLine"
-                android:textSize="14sp" >
-            </EditText>
-
-            <TextView
-                android:id="@+id/notas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="@string/notas"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/notasEdit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:hint="Notas de la evaluación..."
-                android:inputType="textCapSentences"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="231dp"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/SP11AlcanceText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:text="@string/ayuda_cmmi"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="22sp" />
-
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ayuda_cmmi" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_weight="0.35"
-            android:text="Seleccionar áreas de proceso"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="22sp" />
+        <CheckBox
+          android:id="@+id/checkBox1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="SUP - Áreas de proceso de soporte"
+          android:textSize="12sp" />
 
-        <ScrollView
-            android:id="@+id/scrollView1"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginLeft="40dp"
-            android:layout_weight="4"
-            android:fadeScrollbars="false" >
+        <CheckBox
+          android:id="@+id/checkBox2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="CAR - Análisis Causal y Resolución"
+          android:textSize="12sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" >
+        <CheckBox
+          android:id="@+id/checkBox26"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:text="CM - Gestión de la configuración"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SUP - Áreas de proceso de soporte"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="DAR - Análisis de Decisiones y Resolución"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="CAR - Análisis Causal y Resolución"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:text="MA - Medición y Análisis"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox26"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="CM - Gestión de la configuración"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:text="PPQA - Aseguramiento de la Calidad del Proceso y del Producto"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="DAR - Análisis de Decisiones y Resolución"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="PM - Procesos de la gestión del proyecto"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="MA - Medición y Análisis"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox7"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="IPM - Gestión Integrada del Proyecto"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="PPQA - Aseguramiento de la Calidad del Proceso y del Producto"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:text="PMC - Monitorización y Control del Proyecto"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PM - Procesos de la gestión del proyecto"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:text="PP - Planificación del Proyecto"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="IPM - Gestión Integrada del Proyecto"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox10"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="QPM - Gestión Cuantitativa del Proyecto"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="PMC - Monitorización y Control del Proyecto"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox11"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="RSKM - Gestión de Riesgos"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="PP - Planificación del Proyecto"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox12"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:text="SAM - Gestión de Acuerdos con Proveedores"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="QPM - Gestión Cuantitativa del Proyecto"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox13"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:enabled="false"
+          android:text="PRC - Procesos de gestión del proceso"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="RSKM - Gestión de Riesgos"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox14"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="OPD - Definición de Procesos de la Organización"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="SAM - Gestión de Acuerdos con Proveedores"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox15"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="OPF - Enfoque en Procesos de la Organización"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:text="PRC - Procesos de gestión del proceso"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox16"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="OPM - Gestión del Rendimiento de la Organización"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="OPD - Definición de Procesos de la Organización"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox17"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="OPP - Rendimiento de Procesos de la Organización"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="OPF - Enfoque en Procesos de la Organización"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox18"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="OT - Formación en la Organización"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="OPM - Gestión del Rendimiento de la Organización"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox19"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="ENG - Áreas de proceso de ingeniería"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="OPP - Rendimiento de Procesos de la Organización"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox20"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="PI - Integración del Producto"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="OT - Formación en la Organización"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox21"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="RD - Desarrollo de Requisitos"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ENG - Áreas de proceso de ingeniería"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox22"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:text="REQM - Gestión de Requisitos"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="PI - Integración del Producto"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox23"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="TS - Solución Técnica"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="RD - Desarrollo de Requisitos"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox24"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="VAL - Validación"
+          android:textSize="12sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:text="REQM - Gestión de Requisitos"
-                    android:textSize="12sp" />
+        <CheckBox
+          android:id="@+id/checkBox25"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="-10dp"
+          android:enabled="false"
+          android:text="VER - Verificación"
+          android:textSize="12sp" />
+      </LinearLayout>
+    </ScrollView>
 
-                <CheckBox
-                    android:id="@+id/checkBox23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="TS - Solución Técnica"
-                    android:textSize="12sp" />
-
-                <CheckBox
-                    android:id="@+id/checkBox24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="VAL - Validación"
-                    android:textSize="12sp" />
-
-                <CheckBox
-                    android:id="@+id/checkBox25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="-10dp"
-                    android:enabled="false"
-                    android:text="VER - Verificación"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </ScrollView>
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="Comenzar evaluación" />
-    </LinearLayout>
+    <Button
+      android:id="@+id/button2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:text="Comenzar evaluación" />
+  </LinearLayout>
 
 </LinearLayout>

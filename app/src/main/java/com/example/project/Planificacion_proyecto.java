@@ -1910,13 +1910,13 @@ public class Planificacion_proyecto extends Activity {
 
         if (area.equals("CM")) {
           Intent intent = new Intent(Planificacion_proyecto.this,
-              Gestion_configuracion.class);
+              ConfigurationManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Planificacion_proyecto.this.startActivity(intent);
         }
         if (area.equals("MA")) {
           Intent intent = new Intent(Planificacion_proyecto.this,
-              Medicion_analisis.class);
+              MeasurementAnalysisManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Planificacion_proyecto.this.startActivity(intent);
         }

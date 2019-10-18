@@ -28,21 +28,19 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Medicion_analisis extends Activity {
+public class MeasurementAnalysisManagementActivity extends Activity {
 
-  int indiceEvaluacion;
-  int nivel = 3;
-  boolean b1 = true;
-  boolean b2 = true;
-  boolean b3 = true;
-  CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
-      null, 1);
+  private int evaluationIndex;
+  private int nivel = 3;
+  private boolean b1 = true;
+  private boolean b2 = true;
+  private CustomSQLiteHelper helper = new CustomSQLiteHelper(this, "database", null, 1);
 
   protected void onStop() {
     super.onStop();
 
     SharedPreferences preferencias = getSharedPreferences(
-        "medicion_analisis_" + indiceEvaluacion, Context.MODE_PRIVATE);
+        "medicion_analisis_" + evaluationIndex, Context.MODE_PRIVATE);
     SharedPreferences.Editor editorPreferencias = preferencias.edit();
 
     SeekBar sb1 = findViewById(R.id.SP11Seekbar);
@@ -354,7 +352,7 @@ public class Medicion_analisis extends Activity {
     setContentView(R.layout.activity_medicion_analisis);
 
     Intent intent = getIntent();
-    indiceEvaluacion = intent.getIntExtra("indice", 0);
+    evaluationIndex = intent.getIntExtra("indice", 0);
 
     int gestion_configuracion_1 = R.string.medicion_analisis_SP11;
     int gestion_configuracion_2 = R.string.medicion_analisis_SP11subpracticas;
@@ -1341,7 +1339,7 @@ public class Medicion_analisis extends Activity {
     });
 
     ListView listViewAreas = findViewById(R.id.listView1);
-    listViewAreas.setAdapter(new ItemAdapter(this, indiceEvaluacion));
+    listViewAreas.setAdapter(new ItemAdapter(this, evaluationIndex));
 
     listViewAreas.setOnItemClickListener(new OnItemClickListener() {
       @Override
@@ -1353,43 +1351,43 @@ public class Medicion_analisis extends Activity {
         String area = text.getText().toString();
 
         if (area.equals("CM")) {
-          Intent intent = new Intent(Medicion_analisis.this,
-              Gestion_configuracion.class);
-          intent.putExtra("indice", indiceEvaluacion);
-          Medicion_analisis.this.startActivity(intent);
+          Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
+              ConfigurationManagementActivity.class);
+          intent.putExtra("indice", evaluationIndex);
+          MeasurementAnalysisManagementActivity.this.startActivity(intent);
         }
         if (area.equals("MA")) {
 
         }
         if (area.equals("PPQA")) {
-          Intent intent = new Intent(Medicion_analisis.this,
+          Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
               Aseguramiento_calidad_proceso_producto.class);
-          intent.putExtra("indice", indiceEvaluacion);
-          Medicion_analisis.this.startActivity(intent);
+          intent.putExtra("indice", evaluationIndex);
+          MeasurementAnalysisManagementActivity.this.startActivity(intent);
         }
         if (area.equals("PMC")) {
-          Intent intent = new Intent(Medicion_analisis.this,
+          Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
               Monitorizacion_control_proyecto.class);
-          intent.putExtra("indice", indiceEvaluacion);
-          Medicion_analisis.this.startActivity(intent);
+          intent.putExtra("indice", evaluationIndex);
+          MeasurementAnalysisManagementActivity.this.startActivity(intent);
         }
         if (area.equals("PP")) {
-          Intent intent = new Intent(Medicion_analisis.this,
+          Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
               Planificacion_proyecto.class);
-          intent.putExtra("indice", indiceEvaluacion);
-          Medicion_analisis.this.startActivity(intent);
+          intent.putExtra("indice", evaluationIndex);
+          MeasurementAnalysisManagementActivity.this.startActivity(intent);
         }
         if (area.equals("SAM")) {
-          Intent intent = new Intent(Medicion_analisis.this,
+          Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
               Gestion_acuerdos_proveedores.class);
-          intent.putExtra("indice", indiceEvaluacion);
-          Medicion_analisis.this.startActivity(intent);
+          intent.putExtra("indice", evaluationIndex);
+          MeasurementAnalysisManagementActivity.this.startActivity(intent);
         }
         if (area.equals("REQM")) {
-          Intent intent = new Intent(Medicion_analisis.this,
+          Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
               Gestion_requisitos.class);
-          intent.putExtra("indice", indiceEvaluacion);
-          Medicion_analisis.this.startActivity(intent);
+          intent.putExtra("indice", evaluationIndex);
+          MeasurementAnalysisManagementActivity.this.startActivity(intent);
         }
       }
     });
@@ -1398,16 +1396,16 @@ public class Medicion_analisis extends Activity {
     botonAyuda.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = new Intent(Medicion_analisis.this,
+        Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
             HelpActivity.class);
-        Medicion_analisis.this.startActivity(intent);
+        MeasurementAnalysisManagementActivity.this.startActivity(intent);
       }
     });
 
     //CARGAR DATOS DE EVALUACI�N
 
     SharedPreferences preferencias = getSharedPreferences(
-        "medicion_analisis_" + indiceEvaluacion, Context.MODE_PRIVATE);
+        "medicion_analisis_" + evaluationIndex, Context.MODE_PRIVATE);
 
     //SeekBar sb1 = (SeekBar) findViewById(R.id.SP11Seekbar);
     sb1.setProgress(preferencias.getInt("SP11seekbar", 0));
@@ -1667,9 +1665,9 @@ public class Medicion_analisis extends Activity {
     // Handle item selection
     switch (item.getItemId()) {
       case R.id.action_settings:
-        Intent intent = new Intent(Medicion_analisis.this,
+        Intent intent = new Intent(MeasurementAnalysisManagementActivity.this,
             AboutActivity.class);
-        Medicion_analisis.this.startActivity(intent);
+        MeasurementAnalysisManagementActivity.this.startActivity(intent);
         return true;
       default:
         return super.onOptionsItemSelected(item);
@@ -1678,7 +1676,7 @@ public class Medicion_analisis extends Activity {
 
   public class ItemAdapter extends BaseAdapter {
 
-    SQLiteDatabase database = gestor.getReadableDatabase();
+    SQLiteDatabase database = helper.getReadableDatabase();
 
     String areas;
     List<String> lista = new ArrayList<String>();

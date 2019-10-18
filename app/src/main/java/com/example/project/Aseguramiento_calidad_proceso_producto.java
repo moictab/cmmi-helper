@@ -1225,7 +1225,7 @@ public class Aseguramiento_calidad_proceso_producto extends Activity {
         if (area.equals("CM")) {
           Intent intent = new Intent(
               Aseguramiento_calidad_proceso_producto.this,
-              Gestion_configuracion.class);
+              ConfigurationManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Aseguramiento_calidad_proceso_producto.this
               .startActivity(intent);
@@ -1233,7 +1233,7 @@ public class Aseguramiento_calidad_proceso_producto extends Activity {
         if (area.equals("MA")) {
           Intent intent = new Intent(
               Aseguramiento_calidad_proceso_producto.this,
-              Medicion_analisis.class);
+              MeasurementAnalysisManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Aseguramiento_calidad_proceso_producto.this
               .startActivity(intent);

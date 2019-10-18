@@ -28,309 +28,307 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Gestion_configuracion extends Activity {
+public class ConfigurationManagementActivity extends Activity {
 
-  Intent intent = getIntent();
-  int indiceEvaluacion;
-  int nivel = 3;
-  boolean b1 = true;
-  boolean b2 = true;
-  boolean b3 = true;
-  CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
-      null, 1);
+  private int indiceEvaluacion;
+  private int nivel = 3;
+  private boolean b1 = true;
+  private boolean b2 = true;
+
+  private CustomSQLiteHelper helper = new CustomSQLiteHelper(this, "database", null, 1);
 
   protected void onStop() {
     super.onStop();
 
     SharedPreferences preferencias = getSharedPreferences(
         "gestion_configuracion_" + indiceEvaluacion, Context.MODE_PRIVATE);
-    SharedPreferences.Editor editorPreferencias = preferencias.edit();
+    SharedPreferences.Editor editor = preferencias.edit();
 
     SeekBar sb1 = findViewById(R.id.SP11Seekbar);
-    editorPreferencias.putInt("SP11seekbar", sb1.getProgress());
+    editor.putInt("SP11seekbar", sb1.getProgress());
     nivel1(sb1.getProgress());
 
     EditText SP11Edit1 = findViewById(R.id.SP11NotasNotasEdit);
     EditText SP11Edit2 = findViewById(R.id.SP11NotasFortalezasEdit);
     EditText SP11Edit3 = findViewById(R.id.SP11NotasDebilidadesEdit);
-    editorPreferencias.putString("SP11edittext1", SP11Edit1.getText().toString());
-    editorPreferencias.putString("SP11edittext2", SP11Edit2.getText().toString());
-    editorPreferencias.putString("SP11edittext3", SP11Edit3.getText().toString());
+    editor.putString("SP11edittext1", SP11Edit1.getText().toString());
+    editor.putString("SP11edittext2", SP11Edit2.getText().toString());
+    editor.putString("SP11edittext3", SP11Edit3.getText().toString());
 
     Spinner SP11spinner1 = findViewById(R.id.SP11EjemploInputSpinner);
-    editorPreferencias.putInt("SP11spinner1", SP11spinner1.getSelectedItemPosition());
+    editor.putInt("SP11spinner1", SP11spinner1.getSelectedItemPosition());
     EditText SP11Edit4 = findViewById(R.id.SP11EjemploInputText);
-    editorPreferencias.putString("SP11edittext4", SP11Edit4.getText().toString());
+    editor.putString("SP11edittext4", SP11Edit4.getText().toString());
 
     SeekBar sb2 = findViewById(R.id.SP12Seekbar);
-    editorPreferencias.putInt("SP12seekbar", sb2.getProgress());
+    editor.putInt("SP12seekbar", sb2.getProgress());
     nivel1(sb2.getProgress());
 
     EditText SP12Edit1 = findViewById(R.id.SP12NotasEvaluacionEdit);
     EditText SP12Edit2 = findViewById(R.id.SP12NotasFortalezasEdit);
     EditText SP12Edit3 = findViewById(R.id.SP12NotasDebilidadesEdit);
-    editorPreferencias.putString("SP12edittext1", SP12Edit1.getText().toString());
-    editorPreferencias.putString("SP12edittext2", SP12Edit2.getText().toString());
-    editorPreferencias.putString("SP12edittext3", SP12Edit3.getText().toString());
+    editor.putString("SP12edittext1", SP12Edit1.getText().toString());
+    editor.putString("SP12edittext2", SP12Edit2.getText().toString());
+    editor.putString("SP12edittext3", SP12Edit3.getText().toString());
 
     Spinner SP12spinner1 = findViewById(R.id.Spinner01);
-    editorPreferencias.putInt("SP12spinner1", SP12spinner1.getSelectedItemPosition());
+    editor.putInt("SP12spinner1", SP12spinner1.getSelectedItemPosition());
     EditText SP12Edit4 = findViewById(R.id.EditText01);
-    editorPreferencias.putString("SP12edittext4", SP12Edit4.getText().toString());
+    editor.putString("SP12edittext4", SP12Edit4.getText().toString());
     Spinner SP12spinner2 = findViewById(R.id.Spinner03);
-    editorPreferencias.putInt("SP12spinner2", SP12spinner2.getSelectedItemPosition());
+    editor.putInt("SP12spinner2", SP12spinner2.getSelectedItemPosition());
     EditText SP12Edit5 = findViewById(R.id.EditText06);
-    editorPreferencias.putString("SP12edittext5", SP12Edit5.getText().toString());
+    editor.putString("SP12edittext5", SP12Edit5.getText().toString());
     Spinner SP12spinner3 = findViewById(R.id.Spinner04);
-    editorPreferencias.putInt("SP12spinner3", SP12spinner3.getSelectedItemPosition());
+    editor.putInt("SP12spinner3", SP12spinner3.getSelectedItemPosition());
     EditText SP12Edit6 = findViewById(R.id.EditText07);
-    editorPreferencias.putString("SP12edittext6", SP12Edit6.getText().toString());
+    editor.putString("SP12edittext6", SP12Edit6.getText().toString());
 
     SeekBar sb3 = findViewById(R.id.SeekBar01);
-    editorPreferencias.putInt("SP13seekbar", sb3.getProgress());
+    editor.putInt("SP13seekbar", sb3.getProgress());
     nivel1(sb3.getProgress());
 
     EditText SP13Edit1 = findViewById(R.id.EditText03);
     EditText SP13Edit2 = findViewById(R.id.EditText04);
     EditText SP13Edit3 = findViewById(R.id.EditText02);
-    editorPreferencias.putString("SP13edittext1", SP13Edit1.getText().toString());
-    editorPreferencias.putString("SP13edittext2", SP13Edit2.getText().toString());
-    editorPreferencias.putString("SP13edittext3", SP13Edit3.getText().toString());
+    editor.putString("SP13edittext1", SP13Edit1.getText().toString());
+    editor.putString("SP13edittext2", SP13Edit2.getText().toString());
+    editor.putString("SP13edittext3", SP13Edit3.getText().toString());
 
     Spinner SP13spinner1 = findViewById(R.id.Spinner05);
-    editorPreferencias.putInt("SP13spinner1", SP13spinner1.getSelectedItemPosition());
+    editor.putInt("SP13spinner1", SP13spinner1.getSelectedItemPosition());
     EditText SP13Edit4 = findViewById(R.id.EditText08);
-    editorPreferencias.putString("SP13edittext4", SP13Edit4.getText().toString());
+    editor.putString("SP13edittext4", SP13Edit4.getText().toString());
     Spinner SP13spinner2 = findViewById(R.id.Spinner02);
-    editorPreferencias.putInt("SP13spinner2", SP13spinner2.getSelectedItemPosition());
+    editor.putInt("SP13spinner2", SP13spinner2.getSelectedItemPosition());
     EditText SP13Edit5 = findViewById(R.id.EditText05);
-    editorPreferencias.putString("SP13edittext5", SP13Edit5.getText().toString());
+    editor.putString("SP13edittext5", SP13Edit5.getText().toString());
 
     SeekBar sb4 = findViewById(R.id.SeekBar02);
-    editorPreferencias.putInt("SP21seekbar", sb4.getProgress());
+    editor.putInt("SP21seekbar", sb4.getProgress());
     nivel1(sb4.getProgress());
 
     EditText SP21Edit1 = findViewById(R.id.EditText17);
     EditText SP21Edit2 = findViewById(R.id.EditText18);
     EditText SP21Edit3 = findViewById(R.id.EditText16);
-    editorPreferencias.putString("SP21edittext1", SP21Edit1.getText().toString());
-    editorPreferencias.putString("SP21edittext2", SP21Edit2.getText().toString());
-    editorPreferencias.putString("SP21edittext3", SP21Edit3.getText().toString());
+    editor.putString("SP21edittext1", SP21Edit1.getText().toString());
+    editor.putString("SP21edittext2", SP21Edit2.getText().toString());
+    editor.putString("SP21edittext3", SP21Edit3.getText().toString());
 
     Spinner SP21spinner1 = findViewById(R.id.Spinner06);
-    editorPreferencias.putInt("SP21spinner1", SP21spinner1.getSelectedItemPosition());
+    editor.putInt("SP21spinner1", SP21spinner1.getSelectedItemPosition());
     EditText SP21Edit4 = findViewById(R.id.EditText14);
-    editorPreferencias.putString("SP21edittext4", SP21Edit4.getText().toString());
+    editor.putString("SP21edittext4", SP21Edit4.getText().toString());
 
     SeekBar sb5 = findViewById(R.id.SeekBar04);
-    editorPreferencias.putInt("SP22seekbar", sb5.getProgress());
+    editor.putInt("SP22seekbar", sb5.getProgress());
     nivel1(sb5.getProgress());
 
     EditText SP22Edit1 = findViewById(R.id.EditText12);
     EditText SP22Edit2 = findViewById(R.id.EditText11);
     EditText SP22Edit3 = findViewById(R.id.EditText23);
-    editorPreferencias.putString("SP22edittext1", SP22Edit1.getText().toString());
-    editorPreferencias.putString("SP22edittext2", SP22Edit2.getText().toString());
-    editorPreferencias.putString("SP22edittext3", SP22Edit3.getText().toString());
+    editor.putString("SP22edittext1", SP22Edit1.getText().toString());
+    editor.putString("SP22edittext2", SP22Edit2.getText().toString());
+    editor.putString("SP22edittext3", SP22Edit3.getText().toString());
 
     Spinner SP22spinner1 = findViewById(R.id.Spinner11);
-    editorPreferencias.putInt("SP22spinner1", SP22spinner1.getSelectedItemPosition());
+    editor.putInt("SP22spinner1", SP22spinner1.getSelectedItemPosition());
     EditText SP22Edit4 = findViewById(R.id.EditText13);
-    editorPreferencias.putString("SP22edittext4", SP22Edit4.getText().toString());
+    editor.putString("SP22edittext4", SP22Edit4.getText().toString());
     Spinner SP22spinner2 = findViewById(R.id.Spinner09);
-    editorPreferencias.putInt("SP22spinner2", SP22spinner2.getSelectedItemPosition());
+    editor.putInt("SP22spinner2", SP22spinner2.getSelectedItemPosition());
     EditText SP22Edit5 = findViewById(R.id.EditText19);
-    editorPreferencias.putString("SP22edittext5", SP22Edit5.getText().toString());
+    editor.putString("SP22edittext5", SP22Edit5.getText().toString());
 
     SeekBar sb6 = findViewById(R.id.SeekBar03);
-    editorPreferencias.putInt("SP23seekbar", sb6.getProgress());
+    editor.putInt("SP23seekbar", sb6.getProgress());
     nivel1(sb6.getProgress());
 
     EditText SP23Edit1 = findViewById(R.id.EditText09);
     EditText SP23Edit2 = findViewById(R.id.EditText10);
     EditText SP23Edit3 = findViewById(R.id.EditText22);
-    editorPreferencias.putString("SP23edittext1", SP23Edit1.getText().toString());
-    editorPreferencias.putString("SP23edittext2", SP23Edit2.getText().toString());
-    editorPreferencias.putString("SP23edittext3", SP23Edit3.getText().toString());
+    editor.putString("SP23edittext1", SP23Edit1.getText().toString());
+    editor.putString("SP23edittext2", SP23Edit2.getText().toString());
+    editor.putString("SP23edittext3", SP23Edit3.getText().toString());
 
     Spinner SP23spinner1 = findViewById(R.id.Spinner10);
-    editorPreferencias.putInt("SP23spinner1", SP23spinner1.getSelectedItemPosition());
+    editor.putInt("SP23spinner1", SP23spinner1.getSelectedItemPosition());
     EditText SP23Edit4 = findViewById(R.id.EditText15);
-    editorPreferencias.putString("SP23edittext4", SP23Edit4.getText().toString());
+    editor.putString("SP23edittext4", SP23Edit4.getText().toString());
     Spinner SP23spinner2 = findViewById(R.id.Spinner08);
-    editorPreferencias.putInt("SP23spinner2", SP23spinner2.getSelectedItemPosition());
+    editor.putInt("SP23spinner2", SP23spinner2.getSelectedItemPosition());
     EditText SP23Edit5 = findViewById(R.id.EditText20);
-    editorPreferencias.putString("SP23edittext5", SP23Edit5.getText().toString());
+    editor.putString("SP23edittext5", SP23Edit5.getText().toString());
     Spinner SP23spinner3 = findViewById(R.id.Spinner07);
-    editorPreferencias.putInt("SP23spinner3", SP23spinner3.getSelectedItemPosition());
+    editor.putInt("SP23spinner3", SP23spinner3.getSelectedItemPosition());
     EditText SP23Edit6 = findViewById(R.id.EditText21);
-    editorPreferencias.putString("SP23edittext6", SP23Edit6.getText().toString());
+    editor.putString("SP23edittext6", SP23Edit6.getText().toString());
     Spinner SP23spinner4 = findViewById(R.id.Spinner12);
-    editorPreferencias.putInt("SP23spinner4", SP23spinner4.getSelectedItemPosition());
+    editor.putInt("SP23spinner4", SP23spinner4.getSelectedItemPosition());
     EditText SP23Edit7 = findViewById(R.id.EditText24);
-    editorPreferencias.putString("SP23edittext7", SP23Edit7.getText().toString());
+    editor.putString("SP23edittext7", SP23Edit7.getText().toString());
     Spinner SP23spinner5 = findViewById(R.id.Spinner13);
-    editorPreferencias.putInt("SP23spinner5", SP23spinner5.getSelectedItemPosition());
+    editor.putInt("SP23spinner5", SP23spinner5.getSelectedItemPosition());
     EditText SP23Edit8 = findViewById(R.id.EditText25);
-    editorPreferencias.putString("SP23edittext8", SP23Edit8.getText().toString());
+    editor.putString("SP23edittext8", SP23Edit8.getText().toString());
 
     SeekBar sb7 = findViewById(R.id.SeekBar06);
-    editorPreferencias.putInt("SP24seekbar", sb7.getProgress());
+    editor.putInt("SP24seekbar", sb7.getProgress());
     nivel1(sb7.getProgress());
 
     EditText SP24Edit1 = findViewById(R.id.EditText47);
     EditText SP24Edit2 = findViewById(R.id.EditText48);
     EditText SP24Edit3 = findViewById(R.id.EditText38);
-    editorPreferencias.putString("SP24edittext1", SP24Edit1.getText().toString());
-    editorPreferencias.putString("SP24edittext2", SP24Edit2.getText().toString());
-    editorPreferencias.putString("SP24edittext3", SP24Edit3.getText().toString());
+    editor.putString("SP24edittext1", SP24Edit1.getText().toString());
+    editor.putString("SP24edittext2", SP24Edit2.getText().toString());
+    editor.putString("SP24edittext3", SP24Edit3.getText().toString());
 
     Spinner SP24spinner1 = findViewById(R.id.Spinner26);
-    editorPreferencias.putInt("SP24spinner1", SP24spinner1.getSelectedItemPosition());
+    editor.putInt("SP24spinner1", SP24spinner1.getSelectedItemPosition());
     EditText SP24Edit4 = findViewById(R.id.EditText44);
-    editorPreferencias.putString("SP24edittext4", SP24Edit4.getText().toString());
+    editor.putString("SP24edittext4", SP24Edit4.getText().toString());
     Spinner SP24spinner2 = findViewById(R.id.Spinner28);
-    editorPreferencias.putInt("SP24spinner2", SP24spinner2.getSelectedItemPosition());
+    editor.putInt("SP24spinner2", SP24spinner2.getSelectedItemPosition());
     EditText SP24Edit5 = findViewById(R.id.EditText46);
-    editorPreferencias.putString("SP24edittext5", SP24Edit5.getText().toString());
+    editor.putString("SP24edittext5", SP24Edit5.getText().toString());
 
     //GG
 
     SeekBar sbgp21 = findViewById(R.id.sbgp21);
-    editorPreferencias.putInt("GP21seekbar", sbgp21.getProgress());
+    editor.putInt("GP21seekbar", sbgp21.getProgress());
     nivel2(sbgp21.getProgress());
 
     EditText GP21Edit1 = findViewById(R.id.gp21et1);
     EditText GP21Edit2 = findViewById(R.id.gp21et2);
     EditText GP21Edit3 = findViewById(R.id.gp21et3);
-    editorPreferencias.putString("GP21edittext1", GP21Edit1.getText().toString());
-    editorPreferencias.putString("GP21edittext2", GP21Edit2.getText().toString());
-    editorPreferencias.putString("GP21edittext3", GP21Edit3.getText().toString());
+    editor.putString("GP21edittext1", GP21Edit1.getText().toString());
+    editor.putString("GP21edittext2", GP21Edit2.getText().toString());
+    editor.putString("GP21edittext3", GP21Edit3.getText().toString());
 
     SeekBar sbgp22 = findViewById(R.id.sbgp22);
-    editorPreferencias.putInt("GP22seekbar", sbgp22.getProgress());
+    editor.putInt("GP22seekbar", sbgp22.getProgress());
     nivel2(sbgp22.getProgress());
 
     EditText GP22Edit1 = findViewById(R.id.gp22et1);
     EditText GP22Edit2 = findViewById(R.id.gp22et2);
     EditText GP22Edit3 = findViewById(R.id.gp22et3);
-    editorPreferencias.putString("GP22edittext1", GP22Edit1.getText().toString());
-    editorPreferencias.putString("GP22edittext2", GP22Edit2.getText().toString());
-    editorPreferencias.putString("GP22edittext3", GP22Edit3.getText().toString());
+    editor.putString("GP22edittext1", GP22Edit1.getText().toString());
+    editor.putString("GP22edittext2", GP22Edit2.getText().toString());
+    editor.putString("GP22edittext3", GP22Edit3.getText().toString());
 
     SeekBar sbgp23 = findViewById(R.id.sbgp23);
-    editorPreferencias.putInt("GP23seekbar", sbgp23.getProgress());
+    editor.putInt("GP23seekbar", sbgp23.getProgress());
     nivel2(sbgp23.getProgress());
 
     EditText GP23Edit1 = findViewById(R.id.gp23et1);
     EditText GP23Edit2 = findViewById(R.id.gp23et2);
     EditText GP23Edit3 = findViewById(R.id.gp23et3);
-    editorPreferencias.putString("GP23edittext1", GP23Edit1.getText().toString());
-    editorPreferencias.putString("GP23edittext2", GP23Edit2.getText().toString());
-    editorPreferencias.putString("GP23edittext3", GP23Edit3.getText().toString());
+    editor.putString("GP23edittext1", GP23Edit1.getText().toString());
+    editor.putString("GP23edittext2", GP23Edit2.getText().toString());
+    editor.putString("GP23edittext3", GP23Edit3.getText().toString());
 
     SeekBar sbgp24 = findViewById(R.id.sbgp24);
-    editorPreferencias.putInt("GP24seekbar", sbgp24.getProgress());
+    editor.putInt("GP24seekbar", sbgp24.getProgress());
     nivel2(sbgp24.getProgress());
 
     EditText GP24Edit1 = findViewById(R.id.gp24et1);
     EditText GP24Edit2 = findViewById(R.id.gp24et2);
     EditText GP24Edit3 = findViewById(R.id.gp24et3);
-    editorPreferencias.putString("GP24edittext1", GP24Edit1.getText().toString());
-    editorPreferencias.putString("GP24edittext2", GP24Edit2.getText().toString());
-    editorPreferencias.putString("GP24edittext3", GP24Edit3.getText().toString());
+    editor.putString("GP24edittext1", GP24Edit1.getText().toString());
+    editor.putString("GP24edittext2", GP24Edit2.getText().toString());
+    editor.putString("GP24edittext3", GP24Edit3.getText().toString());
 
     SeekBar sbgp25 = findViewById(R.id.sbgp25);
-    editorPreferencias.putInt("GP25seekbar", sbgp25.getProgress());
+    editor.putInt("GP25seekbar", sbgp25.getProgress());
     nivel2(sbgp25.getProgress());
 
     EditText GP25Edit1 = findViewById(R.id.gp25et1);
     EditText GP25Edit2 = findViewById(R.id.gp25et2);
     EditText GP25Edit3 = findViewById(R.id.gp25et3);
-    editorPreferencias.putString("GP25edittext1", GP25Edit1.getText().toString());
-    editorPreferencias.putString("GP25edittext2", GP25Edit2.getText().toString());
-    editorPreferencias.putString("GP25edittext3", GP25Edit3.getText().toString());
+    editor.putString("GP25edittext1", GP25Edit1.getText().toString());
+    editor.putString("GP25edittext2", GP25Edit2.getText().toString());
+    editor.putString("GP25edittext3", GP25Edit3.getText().toString());
 
     SeekBar sbgp26 = findViewById(R.id.sbgp26);
-    editorPreferencias.putInt("GP26seekbar", sbgp26.getProgress());
+    editor.putInt("GP26seekbar", sbgp26.getProgress());
     nivel2(sbgp26.getProgress());
 
     EditText GP26Edit1 = findViewById(R.id.gp26et1);
     EditText GP26Edit2 = findViewById(R.id.gp26et2);
     EditText GP26Edit3 = findViewById(R.id.gp26et3);
-    editorPreferencias.putString("GP26edittext1", GP26Edit1.getText().toString());
-    editorPreferencias.putString("GP26edittext2", GP26Edit2.getText().toString());
-    editorPreferencias.putString("GP26edittext3", GP26Edit3.getText().toString());
+    editor.putString("GP26edittext1", GP26Edit1.getText().toString());
+    editor.putString("GP26edittext2", GP26Edit2.getText().toString());
+    editor.putString("GP26edittext3", GP26Edit3.getText().toString());
 
     SeekBar sbgp27 = findViewById(R.id.sbgp27);
-    editorPreferencias.putInt("GP27seekbar", sbgp27.getProgress());
+    editor.putInt("GP27seekbar", sbgp27.getProgress());
     nivel2(sbgp27.getProgress());
 
     EditText GP27Edit1 = findViewById(R.id.gp27et1);
     EditText GP27Edit2 = findViewById(R.id.gp27et2);
     EditText GP27Edit3 = findViewById(R.id.gp27et3);
-    editorPreferencias.putString("GP27edittext1", GP27Edit1.getText().toString());
-    editorPreferencias.putString("GP27edittext2", GP27Edit2.getText().toString());
-    editorPreferencias.putString("GP27edittext3", GP27Edit3.getText().toString());
+    editor.putString("GP27edittext1", GP27Edit1.getText().toString());
+    editor.putString("GP27edittext2", GP27Edit2.getText().toString());
+    editor.putString("GP27edittext3", GP27Edit3.getText().toString());
 
     SeekBar sbgp28 = findViewById(R.id.sbgp28);
-    editorPreferencias.putInt("GP28seekbar", sbgp28.getProgress());
+    editor.putInt("GP28seekbar", sbgp28.getProgress());
     nivel2(sbgp28.getProgress());
 
     EditText GP28Edit1 = findViewById(R.id.gp28et1);
     EditText GP28Edit2 = findViewById(R.id.gp28et2);
     EditText GP28Edit3 = findViewById(R.id.gp28et3);
-    editorPreferencias.putString("GP28edittext1", GP28Edit1.getText().toString());
-    editorPreferencias.putString("GP28edittext2", GP28Edit2.getText().toString());
-    editorPreferencias.putString("GP28edittext3", GP28Edit3.getText().toString());
+    editor.putString("GP28edittext1", GP28Edit1.getText().toString());
+    editor.putString("GP28edittext2", GP28Edit2.getText().toString());
+    editor.putString("GP28edittext3", GP28Edit3.getText().toString());
 
     SeekBar sbgp29 = findViewById(R.id.sbgp29);
-    editorPreferencias.putInt("GP29seekbar", sbgp29.getProgress());
+    editor.putInt("GP29seekbar", sbgp29.getProgress());
     nivel2(sbgp29.getProgress());
 
     EditText GP29Edit1 = findViewById(R.id.gp29et1);
     EditText GP29Edit2 = findViewById(R.id.gp29et2);
     EditText GP29Edit3 = findViewById(R.id.gp29et3);
-    editorPreferencias.putString("GP29edittext1", GP29Edit1.getText().toString());
-    editorPreferencias.putString("GP29edittext2", GP29Edit2.getText().toString());
-    editorPreferencias.putString("GP29edittext3", GP29Edit3.getText().toString());
+    editor.putString("GP29edittext1", GP29Edit1.getText().toString());
+    editor.putString("GP29edittext2", GP29Edit2.getText().toString());
+    editor.putString("GP29edittext3", GP29Edit3.getText().toString());
 
     SeekBar sbgp210 = findViewById(R.id.sbgp210);
-    editorPreferencias.putInt("GP210seekbar", sbgp210.getProgress());
+    editor.putInt("GP210seekbar", sbgp210.getProgress());
     nivel2(sbgp210.getProgress());
 
     EditText GP210Edit1 = findViewById(R.id.gp210et1);
     EditText GP210Edit2 = findViewById(R.id.gp210et2);
     EditText GP210Edit3 = findViewById(R.id.gp210et3);
-    editorPreferencias.putString("GP210edittext1", GP210Edit1.getText().toString());
-    editorPreferencias.putString("GP210edittext2", GP210Edit2.getText().toString());
-    editorPreferencias.putString("GP210edittext3", GP210Edit3.getText().toString());
+    editor.putString("GP210edittext1", GP210Edit1.getText().toString());
+    editor.putString("GP210edittext2", GP210Edit2.getText().toString());
+    editor.putString("GP210edittext3", GP210Edit3.getText().toString());
 
     SeekBar sbgp31 = findViewById(R.id.sbgp31);
-    editorPreferencias.putInt("GP31seekbar", sbgp31.getProgress());
+    editor.putInt("GP31seekbar", sbgp31.getProgress());
     nivel3(sbgp31.getProgress());
 
     EditText GP31Edit1 = findViewById(R.id.gp31et1);
     EditText GP31Edit2 = findViewById(R.id.gp31et2);
     EditText GP31Edit3 = findViewById(R.id.gp31et3);
-    editorPreferencias.putString("GP31edittext1", GP31Edit1.getText().toString());
-    editorPreferencias.putString("GP31edittext2", GP31Edit2.getText().toString());
-    editorPreferencias.putString("GP31edittext3", GP31Edit3.getText().toString());
+    editor.putString("GP31edittext1", GP31Edit1.getText().toString());
+    editor.putString("GP31edittext2", GP31Edit2.getText().toString());
+    editor.putString("GP31edittext3", GP31Edit3.getText().toString());
 
     SeekBar sbgp32 = findViewById(R.id.sbgp32);
-    editorPreferencias.putInt("GP32seekbar", sbgp32.getProgress());
+    editor.putInt("GP32seekbar", sbgp32.getProgress());
     nivel3(sbgp32.getProgress());
 
     EditText GP32Edit1 = findViewById(R.id.gp32et1);
     EditText GP32Edit2 = findViewById(R.id.gp32et2);
     EditText GP32Edit3 = findViewById(R.id.gp32et3);
-    editorPreferencias.putString("GP32edittext1", GP32Edit1.getText().toString());
-    editorPreferencias.putString("GP32edittext2", GP32Edit2.getText().toString());
-    editorPreferencias.putString("GP32edittext3", GP32Edit3.getText().toString());
+    editor.putString("GP32edittext1", GP32Edit1.getText().toString());
+    editor.putString("GP32edittext2", GP32Edit2.getText().toString());
+    editor.putString("GP32edittext3", GP32Edit3.getText().toString());
 
-    editorPreferencias.putInt("nivel", nivel);
+    editor.putInt("nivel", nivel);
 
-    editorPreferencias.commit();
+    editor.commit();
   }
 
   void nivel1(int i) {
@@ -348,7 +346,7 @@ public class Gestion_configuracion extends Activity {
   }
 
   void nivel3(int i) {
-    if (i < 2 && b2 == true && b1 == true) {
+    if (i < 2 && b2 && b1) {
       nivel = 2;
     }
   }
@@ -1340,40 +1338,40 @@ public class Gestion_configuracion extends Activity {
 
         }
         if (area.equals("MA")) {
-          Intent intent = new Intent(Gestion_configuracion.this,
-              Medicion_analisis.class);
+          Intent intent = new Intent(ConfigurationManagementActivity.this,
+              MeasurementAnalysisManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
-          Gestion_configuracion.this.startActivity(intent);
+          ConfigurationManagementActivity.this.startActivity(intent);
         }
         if (area.equals("PPQA")) {
-          Intent intent = new Intent(Gestion_configuracion.this,
+          Intent intent = new Intent(ConfigurationManagementActivity.this,
               Aseguramiento_calidad_proceso_producto.class);
           intent.putExtra("indice", indiceEvaluacion);
-          Gestion_configuracion.this.startActivity(intent);
+          ConfigurationManagementActivity.this.startActivity(intent);
         }
         if (area.equals("PMC")) {
-          Intent intent = new Intent(Gestion_configuracion.this,
+          Intent intent = new Intent(ConfigurationManagementActivity.this,
               Monitorizacion_control_proyecto.class);
           intent.putExtra("indice", indiceEvaluacion);
-          Gestion_configuracion.this.startActivity(intent);
+          ConfigurationManagementActivity.this.startActivity(intent);
         }
         if (area.equals("PP")) {
-          Intent intent = new Intent(Gestion_configuracion.this,
+          Intent intent = new Intent(ConfigurationManagementActivity.this,
               Planificacion_proyecto.class);
           intent.putExtra("indice", indiceEvaluacion);
-          Gestion_configuracion.this.startActivity(intent);
+          ConfigurationManagementActivity.this.startActivity(intent);
         }
         if (area.equals("SAM")) {
-          Intent intent = new Intent(Gestion_configuracion.this,
+          Intent intent = new Intent(ConfigurationManagementActivity.this,
               Gestion_acuerdos_proveedores.class);
           intent.putExtra("indice", indiceEvaluacion);
-          Gestion_configuracion.this.startActivity(intent);
+          ConfigurationManagementActivity.this.startActivity(intent);
         }
         if (area.equals("REQM")) {
-          Intent intent = new Intent(Gestion_configuracion.this,
+          Intent intent = new Intent(ConfigurationManagementActivity.this,
               Gestion_requisitos.class);
           intent.putExtra("indice", indiceEvaluacion);
-          Gestion_configuracion.this.startActivity(intent);
+          ConfigurationManagementActivity.this.startActivity(intent);
         }
       }
     });
@@ -1382,9 +1380,9 @@ public class Gestion_configuracion extends Activity {
     botonAyuda.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Intent intent = new Intent(Gestion_configuracion.this,
+        Intent intent = new Intent(ConfigurationManagementActivity.this,
             HelpActivity.class);
-        Gestion_configuracion.this.startActivity(intent);
+        ConfigurationManagementActivity.this.startActivity(intent);
 
       }
     });
@@ -1658,9 +1656,9 @@ public class Gestion_configuracion extends Activity {
     // Handle item selection
     switch (item.getItemId()) {
       case R.id.action_settings:
-        Intent intent = new Intent(Gestion_configuracion.this,
+        Intent intent = new Intent(ConfigurationManagementActivity.this,
             AboutActivity.class);
-        Gestion_configuracion.this.startActivity(intent);
+        ConfigurationManagementActivity.this.startActivity(intent);
         return true;
       default:
         return super.onOptionsItemSelected(item);
@@ -1670,7 +1668,7 @@ public class Gestion_configuracion extends Activity {
 
   public class ItemAdapter extends BaseAdapter {
 
-    SQLiteDatabase database = gestor.getReadableDatabase();
+    SQLiteDatabase database = helper.getReadableDatabase();
 
     String areas;
     List<String> lista = new ArrayList<String>();

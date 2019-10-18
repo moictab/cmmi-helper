@@ -14,9 +14,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Nueva_evaluacion extends Activity {
+public class NewEvaluationActivity extends Activity {
 
-  CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
+  private CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
       null, 1);
 
   @Override
@@ -64,55 +64,11 @@ public class Nueva_evaluacion extends Activity {
 
       @Override
       public void onClick(View v) {
-        Intent intent = new Intent(Nueva_evaluacion.this,
+        Intent intent = new Intent(NewEvaluationActivity.this,
             HelpActivity.class);
-        Nueva_evaluacion.this.startActivity(intent);
+        NewEvaluationActivity.this.startActivity(intent);
       }
     });
-
-		/*botonComenzar.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Intent i = getIntent();
-				String nombre_org = i.getStringExtra("nombre_org");
-
-				EditText editNombre = (EditText) findViewById(R.id.SP11NotasFortalezasEdit);
-				EditText editNotas = (EditText) findViewById(R.id.SP11NotasDebilidadesEdit);
-				EditText editTextFecha = (EditText) findViewById(R.id.SP11EjemploInputText);
-
-				String nombre = editNombre.getText().toString();
-				String notas = editNotas.getText().toString();
-				String fecha = editTextFecha.getText().toString();
-
-				// TODO Auto-generated method stub
-				SQLiteDatabase database = gestor.getWritableDatabase();
-
-				Cursor cursor = database.rawQuery("SELECT * FROM Evaluaciones",
-						null);
-				cursor.moveToFirst();
-				int indice = cursor.getCount();
-
-				if (nombre.length() == 0 || nombre == "" || nombre.isEmpty()) {
-					Toast.makeText(getApplicationContext(),
-							"Introduce un nombre para la evaluaci�n",
-							Toast.LENGTH_LONG).show();
-				} else {
-
-					if (database != null) {
-						database.execSQL("INSERT INTO Evaluaciones VALUES ("
-								+ null + ",'" + nombre + "','" + fecha + "','"
-								+ notas + "'," + null + ",'" + nombre_org
-								+ "')");
-						database.close();
-					}
-					Intent intent = new Intent(Nueva_evaluacion.this,
-							Gestion_configuracion.class);
-					intent.putExtra("indice", indice + 1);
-					Nueva_evaluacion.this.startActivity(intent);
-				}
-			}
-		});*/
 
     Button continua = findViewById(R.id.button3);
     continua.setOnClickListener(new View.OnClickListener() {
@@ -135,45 +91,44 @@ public class Nueva_evaluacion extends Activity {
               null);
           cursor.moveToFirst();
           int indice = cursor.getCount();
-          Intent intent = new Intent(Nueva_evaluacion.this,
+          Intent intent = new Intent(NewEvaluationActivity.this,
               Nueva_evaluacion_continua.class);
           intent.putExtra("nombre_org", nombre_org);
           intent.putExtra("indice", indice + 1);
           intent.putExtra("nombre_ev", nombre_ev);
           intent.putExtra("fecha_ev", fecha_ev);
-          Nueva_evaluacion.this.startActivity(intent);
+          NewEvaluationActivity.this.startActivity(intent);
         }
       }
     });
 
-    Button etapas = findViewById(R.id.button2);
-    etapas.setOnClickListener(new View.OnClickListener() {
+    Button btnStages = findViewById(R.id.button2);
+    btnStages.setOnClickListener(new View.OnClickListener() {
 
       @Override
       public void onClick(View v) {
-        // TODO Auto-generated method stub
-        String nombre_ev = editTextNombre.getText().toString();
-        String fecha_ev = notasOrganizacion.getText().toString();
-        if (nombre_ev.length() == 0 || nombre_ev == "" || nombre_ev.isEmpty()) {
-          Toast.makeText(getApplicationContext(),
-              "Introduce un nombre para la evaluaci�n",
+        String evaluationName = editTextNombre.getText().toString();
+        String evaluationDate = notasOrganizacion.getText().toString();
+
+        if (evaluationName.isEmpty()) {
+          Toast.makeText(getApplicationContext(), getString(R.string.input_evaluation_name),
               Toast.LENGTH_LONG).show();
         } else {
-
-          Intent i = getIntent();
-          String nombre_org = i.getStringExtra("nombre_org");
+          Intent intent = getIntent();
+          String organizationName = intent.getStringExtra("nombre_org");
           SQLiteDatabase database = gestor.getWritableDatabase();
+
           Cursor cursor = database.rawQuery("SELECT * FROM Evaluaciones",
               null);
           cursor.moveToFirst();
           int indice = cursor.getCount();
-          Intent intent = new Intent(Nueva_evaluacion.this,
-              Nueva_evaluacion_etapas.class);
-          intent.putExtra("indice", indice + 1);
-          intent.putExtra("nombre_org", nombre_org);
-          intent.putExtra("nombre_ev", nombre_ev);
-          intent.putExtra("fecha_ev", fecha_ev);
-          Nueva_evaluacion.this.startActivity(intent);
+          Intent stagesIntent = new Intent(NewEvaluationActivity.this,
+              NewEvaluationStagesActivity.class);
+          stagesIntent.putExtra("indice", indice + 1);
+          stagesIntent.putExtra("nombre_org", organizationName);
+          stagesIntent.putExtra("nombre_ev", evaluationName);
+          stagesIntent.putExtra("fecha_ev", evaluationDate);
+          NewEvaluationActivity.this.startActivity(stagesIntent);
         }
       }
     });
@@ -192,9 +147,9 @@ public class Nueva_evaluacion extends Activity {
     // Handle item selection
     switch (item.getItemId()) {
       case R.id.action_settings:
-        Intent intent = new Intent(Nueva_evaluacion.this,
+        Intent intent = new Intent(NewEvaluationActivity.this,
             AboutActivity.class);
-        Nueva_evaluacion.this.startActivity(intent);
+        NewEvaluationActivity.this.startActivity(intent);
         return true;
       default:
         return super.onOptionsItemSelected(item);

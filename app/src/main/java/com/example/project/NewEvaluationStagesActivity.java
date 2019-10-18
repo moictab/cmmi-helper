@@ -15,7 +15,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Nueva_evaluacion_etapas extends Activity {
+public class NewEvaluationStagesActivity extends Activity {
 
   private CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
       null, 1);
@@ -37,9 +37,9 @@ public class Nueva_evaluacion_etapas extends Activity {
       @Override
       public void onClick(View v) {
         Intent intent = new Intent(
-            Nueva_evaluacion_etapas.this,
+            NewEvaluationStagesActivity.this,
             HelpActivity.class);
-        Nueva_evaluacion_etapas.this
+        NewEvaluationStagesActivity.this
             .startActivity(intent);
       }
     });
@@ -115,11 +115,11 @@ public class Nueva_evaluacion_etapas extends Activity {
             database.close();
 
             Intent intent = new Intent(
-                Nueva_evaluacion_etapas.this,
-                Gestion_configuracion.class);
+                NewEvaluationStagesActivity.this,
+                ConfigurationManagementActivity.class);
             intent.putExtra("indice", indice + 1);
             intent.putExtra("areas", areas);
-            Nueva_evaluacion_etapas.this.startActivity(intent);
+            NewEvaluationStagesActivity.this.startActivity(intent);
           }
         }
       }
@@ -135,9 +135,9 @@ public class Nueva_evaluacion_etapas extends Activity {
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     if (item.getItemId() == R.id.action_settings) {
-      Intent intent = new Intent(Nueva_evaluacion_etapas.this,
+      Intent intent = new Intent(NewEvaluationStagesActivity.this,
           AboutActivity.class);
-      Nueva_evaluacion_etapas.this.startActivity(intent);
+      NewEvaluationStagesActivity.this.startActivity(intent);
       return true;
     }
     return super.onOptionsItemSelected(item);

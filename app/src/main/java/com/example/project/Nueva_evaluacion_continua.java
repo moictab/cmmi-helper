@@ -263,7 +263,7 @@ public class Nueva_evaluacion_continua extends Activity {
             if (firstArea.equals("CM")) {
               Intent intent = new Intent(
                   Nueva_evaluacion_continua.this,
-                  Gestion_configuracion.class);
+                  ConfigurationManagementActivity.class);
               intent.putExtra("indice", indice + 1);
               intent.putExtra("areas", areas);
               Nueva_evaluacion_continua.this
@@ -272,7 +272,7 @@ public class Nueva_evaluacion_continua extends Activity {
             if (firstArea.equals("MA")) {
               Intent intent = new Intent(
                   Nueva_evaluacion_continua.this,
-                  Medicion_analisis.class);
+                  MeasurementAnalysisManagementActivity.class);
               intent.putExtra("indice", indice + 1);
               intent.putExtra("areas", areas);
               Nueva_evaluacion_continua.this

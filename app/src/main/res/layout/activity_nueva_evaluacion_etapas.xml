@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Nueva_evaluacion_etapas" 
+    tools:context=".NewEvaluationStagesActivity"
     android:baselineAligned="false">
 
     <LinearLayout
@@ -19,23 +19,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/SP11NotasNotasText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Datos de la evaluación"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="22sp" />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos de la evaluación"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="22sp" />
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:text="Nombre:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="14sp" />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Nombre:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/editText1"
@@ -48,14 +46,13 @@
                 android:textSize="14sp" >
             </EditText>
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="Fecha:"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="14sp" />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Fecha:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/editText2"
@@ -67,14 +64,13 @@
                 android:inputType="textMultiLine"
                 android:textSize="14sp"/>
 
-            <TextView
-                android:id="@+id/notasText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="@string/notas"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="14sp"  />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/notas"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/editText3"
@@ -94,14 +90,13 @@
             android:gravity="bottom"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/SP11AlcanceText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:text="@string/ayuda_cmmi"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="22sp" />
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/ayuda_cmmi"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="22sp" />
 
             <Button
                 android:id="@+id/button1"
@@ -117,16 +112,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_weight="1"
-            android:text="Seleccionar nivel de madurez"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="22sp" />
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:text="Seleccionar nivel de madurez"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="22sp" />
 
         <ScrollView
             android:id="@+id/scrollView1"

@@ -1190,13 +1190,13 @@ public class Gestion_requisitos extends Activity {
 
         if (area.equals("CM")) {
           Intent intent = new Intent(Gestion_requisitos.this,
-              Gestion_configuracion.class);
+              ConfigurationManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Gestion_requisitos.this.startActivity(intent);
         }
         if (area.equals("MA")) {
           Intent intent = new Intent(Gestion_requisitos.this,
-              Medicion_analisis.class);
+              MeasurementAnalysisManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Gestion_requisitos.this.startActivity(intent);
         }

@@ -1478,13 +1478,13 @@ public class Monitorizacion_control_proyecto extends Activity {
 
         if (area.equals("CM")) {
           Intent intent = new Intent(Monitorizacion_control_proyecto.this,
-              Gestion_configuracion.class);
+              ConfigurationManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Monitorizacion_control_proyecto.this.startActivity(intent);
         }
         if (area.equals("MA")) {
           Intent intent = new Intent(Monitorizacion_control_proyecto.this,
-              Medicion_analisis.class);
+              MeasurementAnalysisManagementActivity.class);
           intent.putExtra("indice", indiceEvaluacion);
           Monitorizacion_control_proyecto.this.startActivity(intent);
         }

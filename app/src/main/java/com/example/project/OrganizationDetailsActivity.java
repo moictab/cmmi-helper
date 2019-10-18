@@ -26,97 +26,93 @@ import android.widget.Toast;
 public class OrganizationDetailsActivity extends Activity {
 
   private static int RESULT_LOAD_IMAGE = 1;
-  byte[] imageInByte;
-  String picturePath = "";
-  String snotas = "";
-  String snombre = "";
-  String scargo = "";
-  String scorreo = "";
-  String stelefono = "";
 
-  CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
+  private String picturePath = "";
+  private String snotas = "";
+  private String snombre = "";
+  private String scargo = "";
+  private String scorreo = "";
+  private String stelefono = "";
+  private CustomSQLiteHelper helper = new CustomSQLiteHelper(this, "database",
       null, 1);
-  int posicion = 0;
-  String name;
-  String notas;
+  private int posicion = 0;
+  private String name;
+  private String notas;
 
-  TextView tv1;
-  TextView tv2;
-  TextView tv3;
-  TextView tv4;
-  TextView tv5;
-  TextView tv6;
+  private TextView tv2;
+  private TextView tv3;
+  private TextView tv4;
+  private TextView tv5;
+  private TextView tv6;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_consultar_organizacion);
+    this.setContentView(R.layout.activity_organization_details);
 
     Bundle extras = getIntent().getExtras();
     if (extras != null) {
       posicion = extras.getInt("posicion");
     }
 
-    SQLiteDatabase database = gestor.getWritableDatabase();
-    Cursor cursorOrganizaciones = database.rawQuery(
-        "SELECT * FROM Organizaciones", null);
-    cursorOrganizaciones.moveToFirst();
+    SQLiteDatabase database = helper.getWritableDatabase();
+    Cursor cursor = database.rawQuery("SELECT * FROM Organizaciones", null);
+    cursor.moveToFirst();
 
     for (int i = 0; i < posicion; i++) {
-      cursorOrganizaciones.moveToNext();
+      cursor.moveToNext();
     }
 
     ListView listView = findViewById(R.id.listView1);
-
-    Button botonEliminar = findViewById(R.id.button2);
-    Button botonGuardar = findViewById(R.id.buttonGuardarOrganizacion);
+    Button btnRemove = findViewById(R.id.btn_remove);
+    Button btnSave = findViewById(R.id.buttonGuardarOrganizacion);
     Button botonNuevaEvaluacion = findViewById(R.id.button3);
     Button botonAyudaCMMI = findViewById(R.id.buttonAyudaCMMI_NO);
     Button botonAnadirIcono = findViewById(R.id.buttonAnadirIcono);
 
-    tv1 = findViewById(R.id.SP11NotasNotasEdit);
+    TextView tv1 = findViewById(R.id.SP11NotasNotasEdit);
     tv2 = findViewById(R.id.editText7);
     tv3 = findViewById(R.id.SP11NotasDebilidadesEdit);
     tv4 = findViewById(R.id.SP11EjemploInputText);
     tv5 = findViewById(R.id.editText5);
     tv6 = findViewById(R.id.editText6);
 
-    tv1.setText(String.valueOf(cursorOrganizaciones.getString(1)));
+    tv1.setText(String.valueOf(cursor.getString(1)));
     tv1.setKeyListener(null);
     tv1.setFocusable(false);
 
     if (snotas.matches("")) {
-      tv2.setText(String.valueOf(cursorOrganizaciones.getString(2)));
+      tv2.setText(String.valueOf(cursor.getString(2)));
     } else {
       tv2.setText(snotas);
     }
     if (snombre.matches("")) {
-      tv3.setText(String.valueOf(cursorOrganizaciones.getString(3)));
+      tv3.setText(String.valueOf(cursor.getString(3)));
     } else {
       tv3.setText(snombre);
     }
     if (scargo.matches("")) {
-      tv4.setText(String.valueOf(cursorOrganizaciones.getString(4)));
+      tv4.setText(String.valueOf(cursor.getString(4)));
     } else {
       tv4.setText(scargo);
     }
     if (scorreo.matches("")) {
-      tv5.setText(String.valueOf(cursorOrganizaciones.getString(5)));
+      tv5.setText(String.valueOf(cursor.getString(5)));
     } else {
       tv5.setText(scorreo);
     }
     if (stelefono.matches("")) {
-      tv6.setText(String.valueOf(cursorOrganizaciones.getString(6)));
+      tv6.setText(String.valueOf(cursor.getString(6)));
     } else {
       tv6.setText(stelefono);
     }
 
-    name = cursorOrganizaciones.getString(1);
+    name = cursor.getString(1);
     listView.setAdapter(new ItemAdapter(this, name));
 
-    notas = cursorOrganizaciones.getString(2);
+    notas = cursor.getString(2);
 
-    cursorOrganizaciones.close();
+    cursor.close();
 
     listView.setOnItemClickListener(new OnItemClickListener() {
       @Override
@@ -124,7 +120,7 @@ public class OrganizationDetailsActivity extends Activity {
           long arg3) {
         // TODO Auto-generated method stub
 
-        SQLiteDatabase database = gestor.getReadableDatabase();
+        SQLiteDatabase database = helper.getReadableDatabase();
         Cursor cursor2 = database.rawQuery(
             "SELECT * FROM Evaluaciones WHERE ref_org = '" + name
                 + "'", null);
@@ -182,19 +178,19 @@ public class OrganizationDetailsActivity extends Activity {
       public void onClick(View v) {
         // TODO Auto-generated method stub
         Intent intent = new Intent(OrganizationDetailsActivity.this,
-            Nueva_evaluacion.class);
+            NewEvaluationActivity.class);
         intent.putExtra("nombre_org", name);
         intent.putExtra("notas_org", notas);
         OrganizationDetailsActivity.this.startActivity(intent);
       }
     });
 
-    botonGuardar.setOnClickListener(new View.OnClickListener() {
+    btnSave.setOnClickListener(new View.OnClickListener() {
 
       @Override
       public void onClick(View v) {
         // TODO Auto-generated method stub
-        SQLiteDatabase database = gestor.getWritableDatabase();
+        SQLiteDatabase database = helper.getWritableDatabase();
         if (database != null) {
           /*
            * database.execSQL("UPDATE Organizaciones SET logotipo_org = '"
@@ -238,7 +234,7 @@ public class OrganizationDetailsActivity extends Activity {
       }
     });
 
-    botonEliminar.setOnClickListener(new View.OnClickListener() {
+    btnRemove.setOnClickListener(new View.OnClickListener() {
 
       @Override
       public void onClick(View v) {
@@ -255,7 +251,7 @@ public class OrganizationDetailsActivity extends Activity {
                 new DialogInterface.OnClickListener() {
                   public void onClick(DialogInterface dialog,
                       int id) {
-                    SQLiteDatabase database = gestor
+                    SQLiteDatabase database = helper
                         .getWritableDatabase();
                     if (database != null) {
                       database.execSQL("DELETE FROM Organizaciones WHERE nombre_org = '"
@@ -339,7 +335,7 @@ public class OrganizationDetailsActivity extends Activity {
   public void onResume() {
     super.onResume();
 
-    SQLiteDatabase database = gestor.getWritableDatabase();
+    SQLiteDatabase database = helper.getWritableDatabase();
     Cursor cursorOrganizaciones = database.rawQuery(
         "SELECT * FROM Organizaciones", null);
     cursorOrganizaciones.moveToFirst();
@@ -355,7 +351,7 @@ public class OrganizationDetailsActivity extends Activity {
           long arg3) {
         // TODO Auto-generated method stub
 
-        SQLiteDatabase database = gestor.getReadableDatabase();
+        SQLiteDatabase database = helper.getReadableDatabase();
         Cursor cursor = database.rawQuery(
             "SELECT * FROM Evaluaciones WHERE ref_org = '" + name
                 + "'", null);
@@ -378,7 +374,7 @@ public class OrganizationDetailsActivity extends Activity {
    * Bundle extras = getIntent().getExtras(); if (extras != null) { posicion =
    * extras.getInt("posicion"); }
    *
-   * SQLiteDatabase database = gestor.getWritableDatabase(); Cursor
+   * SQLiteDatabase database = helper.getWritableDatabase(); Cursor
    * cursorOrganizaciones = database.rawQuery( "SELECT * FROM Organizaciones",
    * null); cursorOrganizaciones.moveToFirst();
    *
@@ -421,7 +417,7 @@ public class OrganizationDetailsActivity extends Activity {
    * @Override public void onItemClick(AdapterView<?> arg0, View arg1, int
    * arg2, long arg3) { // TODO Auto-generated method stub
    *
-   * SQLiteDatabase database = gestor.getReadableDatabase(); Cursor cursor =
+   * SQLiteDatabase database = helper.getReadableDatabase(); Cursor cursor =
    * database.rawQuery( "SELECT * FROM Evaluaciones WHERE ref_org = '" + name
    * + "'", null); cursor.moveToFirst(); cursor.moveToPosition(arg2);
    *
@@ -457,7 +453,7 @@ public class OrganizationDetailsActivity extends Activity {
    * botonGuardar.setOnClickListener(new View.OnClickListener() {
    *
    * @Override public void onClick(View v) { // TODO Auto-generated method
-   * stub SQLiteDatabase database = gestor.getWritableDatabase(); if (database
+   * stub SQLiteDatabase database = helper.getWritableDatabase(); if (database
    * != null) {
    *
    * database.execSQL("UPDATE Organizaciones SET logotipo_org = '" +
@@ -482,7 +478,7 @@ public class OrganizationDetailsActivity extends Activity {
    * ) .setCancelable(false) .setPositiveButton("Cancelar", null)
    * .setNegativeButton("Eliminar", new DialogInterface.OnClickListener() {
    * public void onClick(DialogInterface dialog, int id) { SQLiteDatabase
-   * database = gestor .getWritableDatabase(); if (database != null) {
+   * database = helper .getWritableDatabase(); if (database != null) {
    * database.execSQL("DELETE FROM Organizaciones WHERE nombre_org = '" + name
    * + "'"); database.close(); }
    *
@@ -494,7 +490,7 @@ public class OrganizationDetailsActivity extends Activity {
   public class ItemAdapter extends BaseAdapter {
 
     public static final int ACTIVITY_CREATE = 10;
-    SQLiteDatabase database = gestor.getWritableDatabase();
+    SQLiteDatabase database = helper.getWritableDatabase();
     Cursor cursor3;
     int contador = 0;
     View view;
@@ -565,7 +561,7 @@ public class OrganizationDetailsActivity extends Activity {
    * Bundle extras = getIntent().getExtras(); if (extras != null) { posicion =
    * extras.getInt("posicion"); }
    *
-   * SQLiteDatabase database = gestor.getWritableDatabase(); Cursor
+   * SQLiteDatabase database = helper.getWritableDatabase(); Cursor
    * cursorOrganizaciones = database.rawQuery( "SELECT * FROM Organizaciones",
    * null); cursorOrganizaciones.moveToFirst();
    *
@@ -608,7 +604,7 @@ public class OrganizationDetailsActivity extends Activity {
    * @Override public void onItemClick(AdapterView<?> arg0, View arg1, int
    * arg2, long arg3) { // TODO Auto-generated method stub
    *
-   * SQLiteDatabase database = gestor.getReadableDatabase(); Cursor cursor =
+   * SQLiteDatabase database = helper.getReadableDatabase(); Cursor cursor =
    * database.rawQuery( "SELECT * FROM Evaluaciones WHERE ref_org = '" + name
    * + "'", null); cursor.moveToFirst(); cursor.moveToPosition(arg2);
    *
@@ -643,7 +639,7 @@ public class OrganizationDetailsActivity extends Activity {
    * botonGuardar.setOnClickListener(new View.OnClickListener() {
    *
    * @Override public void onClick(View v) { // TODO Auto-generated method
-   * stub SQLiteDatabase database = gestor.getWritableDatabase(); if (database
+   * stub SQLiteDatabase database = helper.getWritableDatabase(); if (database
    * != null) { database.execSQL("UPDATE Organizaciones SET logotipo_org = '"
    * + picturePath + "', notas_org= '" + tv2.getText().toString() +
    * "',nombre_per= '" + tv3.getText().toString() + "',cargo_per= '" +
@@ -666,7 +662,7 @@ public class OrganizationDetailsActivity extends Activity {
    * ) .setCancelable(false) .setPositiveButton("Cancelar", null)
    * .setNegativeButton("Eliminar", new DialogInterface.OnClickListener() {
    * public void onClick(DialogInterface dialog, int id) { SQLiteDatabase
-   * database = gestor .getWritableDatabase(); if (database != null) {
+   * database = helper .getWritableDatabase(); if (database != null) {
    * database.execSQL("DELETE FROM Organizaciones WHERE nombre_org = '" + name
    * + "'"); database.close(); }
    *
