@@ -21,7 +21,7 @@ public class Plot extends Activity {
 
     public static final String DATABASE = "database";
 
-    private CustomSQLiteHelper databaseManager = new CustomSQLiteHelper(this, DATABASE, null, 1);
+    private CustomSqliteHelper databaseManager = new CustomSqliteHelper(this, DATABASE, null, 1);
     private LinearLayout linearChart;
     private int evaluationIndex;
 

@@ -33,7 +33,7 @@ public class OrganizationDetailsActivity extends Activity {
     private String scargo = "";
     private String scorreo = "";
     private String stelefono = "";
-    private CustomSQLiteHelper helper = new CustomSQLiteHelper(this, "database",
+    private CustomSqliteHelper helper = new CustomSqliteHelper(this, "database",
             null, 1);
     private int posicion = 0;
     private String name;

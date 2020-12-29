@@ -18,7 +18,7 @@ import java.util.Calendar;
 
 public class Nueva_evaluacion_continua extends Activity {
 
-    CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
+    CustomSqliteHelper gestor = new CustomSqliteHelper(this, "database",
             null, 1);
 
     @Override

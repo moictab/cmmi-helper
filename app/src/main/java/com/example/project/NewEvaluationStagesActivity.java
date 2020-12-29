@@ -18,7 +18,7 @@ import java.util.Calendar;
 
 public class NewEvaluationStagesActivity extends Activity {
 
-    private CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
+    private CustomSqliteHelper gestor = new CustomSqliteHelper(this, "database",
             null, 1);
 
     private String areas = "CM,MA,PMC,PP,PPQA,REQM,SAM,";

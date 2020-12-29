@@ -37,7 +37,7 @@ public class Gestion_acuerdos_proveedores extends Activity {
     boolean b1 = true;
     boolean b2 = true;
     boolean b3 = true;
-    CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
+    CustomSqliteHelper gestor = new CustomSqliteHelper(this, "database",
             null, 1);
 
     protected void onStop() {

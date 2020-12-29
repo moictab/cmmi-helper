@@ -36,7 +36,7 @@ public class ConfigurationManagementActivity extends Activity {
     private boolean b1 = true;
     private boolean b2 = true;
 
-    private CustomSQLiteHelper helper = new CustomSQLiteHelper(this, "database", null, 1);
+    private CustomSqliteHelper helper = new CustomSqliteHelper(this, "database", null, 1);
 
     protected void onStop() {
         super.onStop();

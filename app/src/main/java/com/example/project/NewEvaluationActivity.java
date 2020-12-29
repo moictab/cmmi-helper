@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class NewEvaluationActivity extends Activity {
 
-    private CustomSQLiteHelper gestor = new CustomSQLiteHelper(this, "database",
+    private CustomSqliteHelper gestor = new CustomSqliteHelper(this, "database",
             null, 1);
 
     @Override

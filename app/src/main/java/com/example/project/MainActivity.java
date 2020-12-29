@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
     }
 
     public class ImageAdapter extends BaseAdapter {
-        CustomSQLiteHelper helper = new CustomSQLiteHelper(MainActivity.this, DATABASE, null, 1);
+        CustomSqliteHelper helper = new CustomSqliteHelper(MainActivity.this, DATABASE, null, 1);
         SQLiteDatabase database = helper.getWritableDatabase();
         Cursor cursor = database.rawQuery("SELECT * FROM Organizaciones", null);
         boolean bol = cursor.moveToFirst();

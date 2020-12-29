@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="acerca">Acerca de...</string>
+    <string name="about">Acerca de...</string>
     <string name="app_name">CMMI Helper</string>
     <string name="action_settings">Settings</string>
     <string name="nueva_organizacion">Nueva organización</string>
@@ -1285,5 +1285,8 @@ que mejoran el rendimiento global de la organización.
     <string name="title_activity_plot2">Plot2</string>
   <string name="evaluation_details">Evaluation details</string>
     <string name="input_evaluation_name">Input a name for the evaluation</string>
+    <string name="new_organization_name_empty">Introduce un nombre para la organización</string>
+    <string name="new_organization_organization_name_hint">Nombre de la organización...</string>
+    <string name="action_save">Save</string>
 
 </resources>

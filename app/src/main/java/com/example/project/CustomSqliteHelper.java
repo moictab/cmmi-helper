@@ -5,12 +5,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class CustomSQLiteHelper extends SQLiteOpenHelper {
+public class CustomSqliteHelper extends SQLiteOpenHelper {
 
     private static final String sqlCreateOrganizacion = "CREATE TABLE Organizaciones (logotipo_org TEXT, nombre_org TEXT PRIMARY KEY, notas_org TEXT, nombre_per TEXT, cargo_per TEXT, correo_per TEXT, telefono_per TEXT)";
     private static final String sqlCreateEvaluacion = "CREATE TABLE Evaluaciones (cod_ev INTEGER PRIMARY KEY AUTOINCREMENT, nombre_ev TEXT, fecha_inicio_ev TEXT, notas_ev TEXT, areas_ev TEXT, ref_org TEXT REFERENCES Organizaciones(nombre_org) ON DELETE CASCADE)";
 
-    public CustomSQLiteHelper(Context context, String name, CursorFactory factory, int version) {
+    public CustomSqliteHelper(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
