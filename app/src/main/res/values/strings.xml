@@ -1288,5 +1288,11 @@ que mejoran el rendimiento global de la organización.
     <string name="new_organization_name_empty">Introduce un nombre para la organización</string>
     <string name="new_organization_organization_name_hint">Nombre de la organización...</string>
     <string name="action_save">Save</string>
+    <string name="organization_notes_hint">Notas de la organización...</string>
+    <string name="contact_name_hint">Nombre de la persona de contacto...</string>
+    <string name="contact_position_hint">Cargo de la persona de contacto...</string>
+    <string name="contact_email_hint">Correo de la persona de contacto...</string>
+    <string name="contact_phone_hint">Teléfono de la persona de contacto...</string>
+    <string name="new_evaluation_content_description">New evaluation icon</string>
 
 </resources>

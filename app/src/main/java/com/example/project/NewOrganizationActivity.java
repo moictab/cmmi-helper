@@ -48,12 +48,12 @@ public class NewOrganizationActivity extends Activity {
 
         fabNewEvaluation = findViewById(R.id.fabNewEvaluation);
 
-        etOrganizationName = findViewById(R.id.etOrganizationName);
-        etOrganizationNotes = findViewById(R.id.etOrganizationNotes);
-        etContactName = findViewById(R.id.etContactName);
-        etContactPosition = findViewById(R.id.etContactPosition);
-        etContactEmail = findViewById(R.id.etContactEmail);
-        etContactPhone = findViewById(R.id.etContactPhone);
+        etOrganizationName = findViewById(R.id.tilOrganizationName);
+        etOrganizationNotes = findViewById(R.id.tilOrganizationNotes);
+        etContactName = findViewById(R.id.tilContactName);
+        etContactPosition = findViewById(R.id.tilContactPosition);
+        etContactEmail = findViewById(R.id.tilContactEmail);
+        etContactPhone = findViewById(R.id.tilContactPhone);
 
         btnAddIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -179,7 +179,7 @@ public class NewOrganizationActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        this.getMenuInflater().inflate(R.menu.nueva_organizacion, menu);
+        this.getMenuInflater().inflate(R.menu.menu_new_organization, menu);
         return true;
     }
 
